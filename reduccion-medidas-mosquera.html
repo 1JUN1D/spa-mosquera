@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reducción de Medidas en Mosquera | Esteticista - Estética Lisamar</title>
+    <meta name="description" content="Reducción de medidas en Mosquera especializada en moldear tu figura y eliminar centímetros de forma natural. Estética Lisamar - Body Beautiful.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #D4AF37;
+            --dark-gold: #B8941F;
+            --light-gold: #F4E4A6;
+            --white: #FFFFFF;
+            --off-white: #FEFEFE;
+            --light-gray: #F8F8F8;
+            --dark-gray: #333333;
+            --text-gray: #666666;
+            --brown: #4A3428;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+        }
+
+        .header {
+            background: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 60px;
+            width: auto;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--gold);
+            border: 2px solid var(--gold);
+        }
+
+        .btn-secondary:hover {
+            background: var(--light-gold);
+            transform: translateY(-2px);
+        }
+
+        .breadcrumb {
+            background: var(--light-gray);
+            padding: 1rem 0;
+        }
+
+        .breadcrumb-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .breadcrumb a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--off-white) 0%, var(--light-gray) 100%);
+            padding: 4rem 0;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: var(--brown);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-content .subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .hero-image {
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .content-section {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .main-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: var(--brown);
+            margin-bottom: 2rem;
+        }
+
+        .main-content h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            margin: 2.5rem 0 1.5rem 0;
+        }
+
+        .main-content p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .main-content ul {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .main-content li {
+            color: var(--text-gray);
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
+        }
+
+        .sidebar {
+            background: var(--light-gray);
+            padding: 3rem;
+            border-radius: 15px;
+            height: fit-content;
+            position: sticky;
+            top: 120px;
+        }
+
+        .sidebar h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--brown);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .contact-info {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .contact-item a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .areas-section {
+            background: linear-gradient(135deg, var(--light-gray), var(--off-white));
+            padding: 6rem 0;
+        }
+
+        .areas-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            text-align: center;
+            color: var(--brown);
+            margin-bottom: 4rem;
+        }
+
+        .areas-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .area-item {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 2px solid transparent;
+        }
+
+        .area-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            border-color: var(--gold);
+        }
+
+        .area-item h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--brown);
+            margin-bottom: 1rem;
+        }
+
+        .area-item p {
+            color: var(--text-gray);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            border-radius: 50px;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        .footer {
+            background: var(--brown);
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer p {
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-gold), rgba(212, 175, 55, 0.1));
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid var(--gold);
+        }
+
+        .highlight-box h4 {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--brown);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .sidebar {
+                position: relative;
+                top: 0;
+            }
+
+            .areas-list {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-buttons {
+                gap: 0.5rem;
+            }
+
+            .btn {
+                padding: 10px 16px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .main-content h2 {
+                font-size: 2rem;
+            }
+
+            .main-content h3 {
+                font-size: 1.5rem;
+            }
+
+            .sidebar {
+                padding: 2rem;
+            }
+
+            .area-item {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/"><img src="logo_limpio.png" alt="Estética Lisamar" class="logo"></a>
+            <div class="nav-buttons">
+                <a href="tel:+573135197957" class="btn btn-secondary">Contacto</a>
+                <a href="../catalogo.html" class="btn btn-primary">Catálogo</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="/">Inicio</a> / <a href="/esteticista-mosquera.html">Esteticista en Mosquera</a> / <span>Reducción de Medidas en Mosquera</span>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Reducción de Medidas en Mosquera</h1>
+                <div class="subtitle">Moldea tu Figura y Elimina Centímetros de Forma Natural</div>
+                <p>Especialistas en reducción de medidas en Mosquera, dedicados a ayudarte a alcanzar tu figura ideal mediante técnicas avanzadas no invasivas. Nuestros tratamientos están diseñados para eliminar centímetros de forma localizada, moldeando tu silueta y mejorando tu contorno corporal.</p>
+                <p>Utilizamos tecnologías de vanguardia y protocolos personalizados que atacan directamente la grasa localizada, mejoran la circulación y estimulan el metabolismo local para lograr una reducción efectiva y duradera de tus medidas.</p>
+
+                <div class="hero-buttons">
+                    <a href="https://wa.me/573135197957" class="btn btn-primary">Agendar Consulta</a>
+                    <a href="/esteticista-mosquera.html" class="btn btn-secondary">Ver Más Tratamientos</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Espacio para imagen principal de reducción de medidas -->
+                <img src="reduccion-medidas-mosquera.jpg" alt="Reducción de medidas en Mosquera - Tratamiento especializado">
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="content-container">
+            <div class="content-grid">
+                <div class="main-content">
+                    <h2>¿Qué es la Reducción de Medidas?</h2>
+                    <p>La reducción de medidas es un conjunto de tratamientos estéticos especializados diseñados para disminuir el perímetro corporal en áreas específicas como abdomen, cintura, caderas, muslos y brazos. A diferencia de la pérdida de peso general, estos procedimientos se enfocan en eliminar la grasa localizada y mejorar la tonicidad muscular para lograr un contorno más definido y armonioso.</p>
+
+                    <p>En Estética Lisamar, nuestra reducción de medidas en Mosquera combina tecnologías avanzadas con técnicas manuales para ofrecer resultados visibles desde las primeras sesiones, sin procedimientos invasivos ni tiempos de recuperación prolongados.</p>
+
+                    <div class="highlight-box">
+                        <h4>Beneficios de la Reducción de Medidas</h4>
+                        <p>Eliminación de grasa localizada, mejora del contorno corporal, reducción de celulitis, aumento de la tonicidad muscular, mejora de la circulación sanguínea y linfática, y aumento de la autoestima.</p>
+                    </div>
+
+                    <h3>¿Cómo Funciona la Reducción de Medidas?</h3>
+                    <p>Nuestros tratamientos de reducción de medidas actúan a través de diferentes mecanismos para lograr resultados efectivos:</p>
+
+                    <ul>
+                        <li><strong>Destrucción de Adipocitos:</strong> Rompe las células grasas mediante diferentes tecnologías.</li>
+                        <li><strong>Estimulación Metabólica:</strong> Acelera el metabolismo local para quemar grasa más eficientemente.</li>
+                        <li><strong>Drenaje Linfático:</strong> Elimina toxinas y líquidos retenidos que aumentan el volumen.</li>
+                        <li><strong>Tonificación Muscular:</strong> Fortalece los músculos para un contorno más definido.</li>
+                        <li><strong>Mejora de la Circulación:</strong> Optimiza el flujo sanguíneo para una mejor oxigenación de los tejidos.</li>
+                        <li><strong>Reafirmación Cutánea:</strong> Estimula la producción de colágeno para una piel más firme.</li>
+                    </ul>
+
+                    <h3>Tecnologías para Reducción de Medidas</h3>
+                    <p>Nuestro centro de reducción de medidas en Mosquera utiliza las tecnologías más avanzadas para ofrecer resultados óptimos:</p>
+
+                    <ul>
+                        <li><strong>Cavitación Ultrasónica:</strong> Ondas de ultrasonido de baja frecuencia que rompen las células grasas.</li>
+                        <li><strong>Radiofrecuencia Corporal:</strong> Calor controlado que estimula la producción de colágeno y elimina grasa.</li>
+                        <li><strong>Vacumterapia:</strong> Masaje por succión que moviliza la grasa y mejora la circulación.</li>
+                        <li><strong>Electroestimulación Muscular:</strong> Tonifica y fortalece los músculos mediante impulsos eléctricos.</li>
+                        <li><strong>Maderoterapia:</strong> Técnica ancestral que utiliza herramientas de madera para moldear la figura.</li>
+                        <li><strong>Hidrolipoclasia:</strong> Inyecciones de suero fisiológico que emulsionan la grasa localizada.</li>
+                    </ul>
+
+                    <h3>¿Quiénes son Candidatos Ideales?</h3>
+                    <p>Nuestros tratamientos de reducción de medidas están indicados para personas que:</p>
+
+                    <ul>
+                        <li><strong>Grasa Localizada:</strong> Tienen acumulación de grasa en áreas específicas a pesar del ejercicio.</li>
+                        <li><strong>Flacidez Moderada:</strong> Presentan pérdida de tonicidad muscular y firmeza cutánea.</li>
+                        <li><strong>Retención de Líquidos:</strong> Experimentan hinchazón y aumento de volumen por acumulación de líquidos.</li>
+                        <li><strong>Post-Embarazo:</strong> Buscan recuperar su figura después del parto.</li>
+                        <li><strong>Post-Cirugía:</strong> Desean complementar los resultados de cirugías estéticas.</li>
+                        <li><strong>Mantenimiento:</strong> Quieren mantener su figura después de alcanzar sus objetivos de peso.</li>
+                    </ul>
+
+                    <p>Realizamos una evaluación completa para determinar el protocolo más adecuado según tus necesidades específicas.</p>
+
+                    <div class="highlight-box">
+                        <h4>Resultados Comprobados</h4>
+                        <p>Nuestros tratamientos han demostrado una reducción promedio de 2-4 cm por sesión en áreas tratadas, con mejoras significativas en la apariencia de la piel y el contorno corporal.</p>
+                    </div>
+
+                    <h3>Protocolo de Tratamiento Personalizado</h3>
+                    <p>Cada sesión de reducción de medidas tiene una duración de 60 a 75 minutos e incluye:</p>
+
+                    <ul>
+                        <li>Evaluación antropométrica y medición de áreas a tratar</li>
+                        <li>Limpieza y preparación de la zona con productos especializados</li>
+                        <li>Aplicación de tecnología principal según el protocolo establecido</li>
+                        <li>Técnicas complementarias para potenciar los resultados</li>
+                        <li>Drenaje linfático manual para eliminar toxinas</li>
+                        <li>Aplicación de productos reafirmantes y reductoras</li>
+                    </ul>
+
+                    <h3>Número de Sesiones Recomendadas</h3>
+                    <p>Para obtener resultados óptimos en reducción de medidas recomendamos:</p>
+
+                    <ul>
+                        <li><strong>Reducción Básica:</strong> 8-10 sesiones con frecuencia de 2 veces por semana</li>
+                        <li><strong>Reducción Intensiva:</strong> 12-15 sesiones con frecuencia de 3 veces por semana inicial</li>
+                        <li><strong>Mantenimiento:</strong> Sesiones mensuales después de completar el tratamiento principal</li>
+                    </ul>
+
+                    <p>Los resultados son progresivos y acumulativos, con mejoras visibles desde la tercera sesión que se consolidan al completar el protocolo recomendado.</p>
+
+                    <h3>Cuidados y Recomendaciones</h3>
+                    <p>Para optimizar y mantener los resultados del tratamiento, proporcionamos recomendaciones específicas:</p>
+
+                    <ul>
+                        <li>Mantener una hidratación adecuada (2-3 litros de agua diarios)</li>
+                        <li>Seguir una alimentación balanceada baja en grasas y azúcares</li>
+                        <li>Realizar actividad física regularmente</li>
+                        <li>Evitar el consumo de alcohol y tabaco</li>
+                        <li>Usar fajas o prendas compresivas según indicación</li>
+                        <li>Aplicar cremas reductoras y reafirmantes en casa</li>
+                    </ul>
+
+                    <h3>¿Por Qué Elegir Estética Lisamar?</h3>
+                    <p>Somos especialistas reconocidos en reducción de medidas en Mosquera, con amplia experiencia en tratamientos corporales no invasivos. Nuestro enfoque personalizado combina diferentes tecnologías para ofrecer resultados superiores.</p>
+
+                    <p>Contamos con equipos de última generación y seguimos protocolos médicos especializados que nos permiten lograr reducciones efectivas y duraderas, ayudándote a alcanzar la figura que deseas de forma segura y natural.</p>
+                </div>
+
+                <div class="sidebar">
+                    <h3>Agenda tu Consulta</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span style="font-size: 20px; color: var(--gold);">📱</span>
+                            <a href="tel:+573135197957">+57 313 519 7957</a>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <span style="font-size: 20px; color: var(--gold);">📍</span>
+                            <span>Mosquera, Cundinamarca</span>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <span style="font-size: 20px; color: var(--gold);">🕒</span>
+                            <span>Lun - Sáb: 8:00 AM - 6:00 PM</span>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <img src="instagram.jpg" alt="Instagram"
+                                style="width: 22px; height: 22px; margin-right: 8px;">
+                            <a href="https://www.instagram.com/estetica_lisamar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                            target="_blank">
+                            @estetica_lisamar
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/573135197957" class="btn btn-primary" style="width: 100%; text-align: center; display: block;">Contactar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Areas de Servicio -->
+    <section class="areas-section">
+        <div class="areas-container">
+            <h2 class="section-title">Áreas de Servicio</h2>
+            <p style="text-align: center; margin-bottom: 3rem; color: var(--text-gray); font-size: 1.1rem;">
+                Ofrecemos reducción de medidas en Mosquera y municipios cercanos
+            </p>
+            
+            <div class="areas-list">
+                
+                <div class="area-item">
+                    <h4>Madrid</h4>
+                    <p>Veredas Boyero y La Estancia entre el Río Subachoque, cerro Tibayatá y humedal Laguna de la Herrera y su conurbación con el sector de Casablanca</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Funza</h4>
+                    <p>Conurbación San Andrés y La Ramada del Hato. Reducción de medidas profesional cerca de ti.</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Bojacá</h4>
+                    <p>Atendemos en todo el municipio de Bojacá con nuestros tratamientos especializados en reducción de medidas.</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Bogotá - Kennedy</h4>
+                    <p>Localidades de Kennedy y Fontibón (desde el Aeropuerto El Dorado hasta la UPZ Las Margaritas Calle 49 Sur)</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Soacha</h4>
+                    <p>Corregimiento 2, vereda Canoas y Corregimiento 2, vereda Bosatama. Reducción de medidas de alta calidad.</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Bogotá - Bosa</h4>
+                    <p>Localidad de Bosa (desde la UPZ El Porvenir - Calle 49 Sur- y Tintal Sur hasta desembocadura del Río Tunjuelo)</p>
+                </div>
+
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="color: var(--text-gray); margin-bottom: 2rem;">
+                    ¿No encuentras tu zona? ¡Contáctanos! Evaluamos la posibilidad de extender nuestros servicios.
+                </p>
+                <a href="https://wa.me/573135197957" class="btn btn-primary">Consultar Cobertura</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/573135197957" class="whatsapp-float">
+        <img src="whatsapp.png" alt="WhatsApp" 
+            style="width: 22px; height: 22px; margin-right: 8px;">
+        <span>WhatsApp</span>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Estética Lisamar - Body Beautiful. Todos los derechos reservados.</p>
+            <p>Reducción de medidas en Mosquera - Moldea tu figura y elimina centímetros de forma natural</p>
+        </div>
+    </footer>
+</body>
+</html>

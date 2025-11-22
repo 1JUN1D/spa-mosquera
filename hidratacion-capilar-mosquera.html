@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidratación Capilar Profesional en Mosquera | Spa y Centro de Bienestar - Estética Lisamar</title>
+    <meta name="description" content="Hidratación Capilar Profesional en Mosquera para cabello sedoso, manejable y lleno de vida. Tratamiento intensivo de hidratación. Estética Lisamar - Body Beautiful.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #D4AF37;
+            --dark-gold: #B8941F;
+            --light-gold: #F4E4A6;
+            --white: #FFFFFF;
+            --off-white: #FEFEFE;
+            --light-gray: #F8F8F8;
+            --dark-gray: #333333;
+            --text-gray: #666666;
+            --brown: #4A3428;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+        }
+
+        .header {
+            background: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 60px;
+            width: auto;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--gold);
+            border: 2px solid var(--gold);
+        }
+
+        .btn-secondary:hover {
+            background: var(--light-gold);
+            transform: translateY(-2px);
+        }
+
+        .breadcrumb {
+            background: var(--light-gray);
+            padding: 1rem 0;
+        }
+
+        .breadcrumb-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .breadcrumb a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--off-white) 0%, var(--light-gray) 100%);
+            padding: 4rem 0;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: var(--brown);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-content .subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .hero-image {
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .content-section {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .main-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: var(--brown);
+            margin-bottom: 2rem;
+        }
+
+        .main-content h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            margin: 2.5rem 0 1.5rem 0;
+        }
+
+        .main-content p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .main-content ul {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .main-content li {
+            color: var(--text-gray);
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
+        }
+
+        .sidebar {
+            background: var(--light-gray);
+            padding: 3rem;
+            border-radius: 15px;
+            height: fit-content;
+            position: sticky;
+            top: 120px;
+        }
+
+        .sidebar h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--brown);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .contact-info {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .contact-item a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .areas-section {
+            background: linear-gradient(135deg, var(--light-gray), var(--off-white));
+            padding: 6rem 0;
+        }
+
+        .areas-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            text-align: center;
+            color: var(--brown);
+            margin-bottom: 4rem;
+        }
+
+        .areas-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .area-item {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 2px solid transparent;
+        }
+
+        .area-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            border-color: var(--gold);
+        }
+
+        .area-item h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--brown);
+            margin-bottom: 1rem;
+        }
+
+        .area-item p {
+            color: var(--text-gray);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            border-radius: 50px;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        .footer {
+            background: var(--brown);
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer p {
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-gold), rgba(212, 175, 55, 0.1));
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid var(--gold);
+        }
+
+        .highlight-box h4 {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--brown);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .sidebar {
+                position: relative;
+                top: 0;
+            }
+
+            .areas-list {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-buttons {
+                gap: 0.5rem;
+            }
+
+            .btn {
+                padding: 10px 16px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .main-content h2 {
+                font-size: 2rem;
+            }
+
+            .main-content h3 {
+                font-size: 1.5rem;
+            }
+
+            .sidebar {
+                padding: 2rem;
+            }
+
+            .area-item {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/"><img src="logo_limpio.png" alt="Estética Lisamar" class="logo"></a>
+            <div class="nav-buttons">
+                <a href="tel:+573135197957" class="btn btn-secondary">Contacto</a>
+                <a href="../catalogo.html" class="btn btn-primary">Catálogo</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="/">Inicio</a> / <a href="/spa-centro-bienestar-mosquera.html">Spa y Centro de Bienestar en Mosquera</a> / <span>Hidratación Capilar en Mosquera</span>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Hidratación Capilar Profesional en Mosquera</h1>
+                <div class="subtitle">Sedosidad y Suavidad que Transforman tu Melena</div>
+                <p>Ofrecemos el tratamiento de hidratación capilar más avanzado en Mosquera, diseñado para devolver la humedad esencial a tu cabello y transformar texturas ásperas en melenas sedosas y manejables. Nuestro protocolo exclusivo utiliza tecnología de nano-partículas que garantizan una hidratación profunda desde la raíz hasta las puntas.</p>
+                <p>Combinamos ingredientes naturales de alta penetración con principios activos humectantes que crean una barrera de protección duradera, evitando la pérdida de humedad y manteniendo tu cabello hidratado, brillante y saludable por más tiempo.</p>
+
+                <div class="hero-buttons">
+                    <a href="https://wa.me/573135197957" class="btn btn-primary">Agendar Tratamiento</a>
+                    <a href="/spa-centro-bienestar-mosquera.html" class="btn btn-secondary">Ver Más Tratamientos</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Espacio para imagen principal de hidratación capilar -->
+                <img src="hidratacion-capilar-mosquera.jpg" alt="Hidratación Capilar Profesional en Mosquera - Tratamiento intensivo de hidratación">
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="content-container">
+            <div class="content-grid">
+                <div class="main-content">
+                    <h2>¿Qué es la Hidratación Capilar Profesional?</h2>
+                    <p>La hidratación capilar profesional es un tratamiento intensivo que restaura los niveles óptimos de humedad en la fibra capilar, devolviendo la elasticidad, suavidad y vitalidad natural del cabello. A diferencia de las hidrataciones convencionales, nuestro tratamiento utiliza moléculas de bajo peso molecular que penetran hasta la corteza capilar, garantizando resultados profundos y duraderos.</p>
+
+                    <p>En Estética Lisamar hemos desarrollado un sistema único de hidratación que no solo repone la humedad perdida, sino que también crea una memoria capilar que enseña a tu cabello a mantenerse hidratado por más tiempo, reduciendo la necesidad de tratamientos constantes.</p>
+
+                    <div class="highlight-box">
+                        <h4>Beneficios de la Hidratación Capilar Profesional</h4>
+                        <p>Restauración completa de la humedad natural, aumento de la elasticidad y flexibilidad, reducción del frizz y electricidad estática, mejora del brillo y reflectividad natural, facilitación del peinado y manejo diario, prevención del quiebre y split ends, protección contra agentes deshidratantes, y prolongación del color en cabellos teñidos.</p>
+                    </div>
+
+                    <h3>¿Cómo Funciona Este Tratamiento?</h3>
+                    <p>Nuestra hidratación capilar actúa a través de un sistema de triple acción:</p>
+
+                    <ul>
+                        <li><strong>Penetración Profunda:</strong> Moléculas humectantes que llegan hasta la médula capilar.</li>
+                        <li><strong>Retención Inteligente:</strong> Sistema que mantiene la humedad donde se necesita.</li>
+                        <li><strong>Barrera Protectora:</strong> Sellado que evita la evaporación de la humedad.</li>
+                        <li><strong>Balance Hídrico:</strong> Regulación natural de los niveles de humedad.</li>
+                        <li><strong>Nutrición Complementaria:</strong> Vitaminas que potencian la hidratación.</li>
+                        <li><strong>Memoria Capilar:</strong> Enseña al cabello a mantenerse hidratado.</li>
+                    </ul>
+
+                    <h3>Ingredientes Hidratantes de Nuestra Fórmula</h3>
+                    <p>Nuestro tratamiento utiliza ingredientes de alta eficacia hidratante:</p>
+
+                    <ul>
+                        <li><strong>Ácido Hialurónico Capilar:</strong> Hidratación intensiva de bajo peso molecular.</li>
+                        <li><strong>Aloe Vera Orgánico:</strong> Humectación natural y calmante.</li>
+                        <li><strong>Manteca de Karité:</strong> Nutrición profunda y emoliente.</li>
+                        <li><strong>Aceite de Coco Virgen:</strong> Penetración profunda y reconstrucción.</li>
+                        <li><strong>Glicerina Vegetal:</strong> Atracción y retención de humedad ambiental.</li>
+                        <li><strong>Miel de Manuka:</strong> Humectación natural y antibacterial.</li>
+                        <li><strong>Extracto de Bambú:</strong> Silicio natural que sella la humedad.</li>
+                    </ul>
+
+                    <h3>Señales de que Necesitas Hidratación Capilar</h3>
+                    <p>Este tratamiento es ideal si presentas alguno de estos síntomas:</p>
+
+                    <ul>
+                        <li><strong>Cabello Quebradizo:</strong> Se rompe con facilidad al peinarlo.</li>
+                        <li><strong>Textura Áspera:</strong> Sensación de paja al tacto.</li>
+                        <li><strong>Frizz Constanté:</strong> Rebeldía incluso en ambientes no húmedos.</li>
+                        <li><strong>Falta de Brilló:</strong> Apariencia opaca y sin vida.</li>
+                        <li><strong>Porosidad Alta:</strong> Se seca extremadamente rápido después del lavado.</li>
+                        <li><strong>Dificultad para Peinar:</strong> Enredos constantes y resistencia al cepillo.</li>
+                        <li><strong>Puntas Abiertas:</strong> Split ends frecuentes a pesar de los cortes.</li>
+                    </ul>
+
+                    <h3>Protocolo de Nuestra Sesión de Hidratación</h3>
+                    <p>Cada sesión sigue un protocolo meticulosamente diseñado:</p>
+
+                    <ul>
+                        <li><strong>Análisis Capilar:</strong> Evaluación profesional de la porosidad y necesidades.</li>
+                        <li><strong>Limpieza Suave:</strong> Shampoo libre de sulfatos que no deshidrata.</li>
+                        <li><strong>Exfoliación del Cuero Cabelludo:</strong> Eliminación de células muertas que obstruyen.</li>
+                        <li><strong>Aplicación del Tratamiento:</strong> Técnica específica para máxima penetración.</li>
+                        <li><strong>Vapor Ozono:</strong> Abre cutículas y potencia la absorción.</li>
+                        <li><strong>Masaje Capilar:</strong> Estimula circulación y distribución uniforme.</li>
+                        <li><strong>Tiempo de Acción:</strong> Permite la hidratación profunda.</li>
+                        <li><strong>Enjuague con Agua Fría:</strong> Sella cutículas y fija la hidratación.</li>
+                    </ul>
+
+                    <h3>¿Para Quién es Ideal Este Tratamiento?</h3>
+                    <p>La hidratación capilar profesional es perfecta para personas con cabello naturalmente seco, quienes usan herramientas de calor frecuentemente, personas que viven en climas secos o con alta contaminación, cabellos teñidos o con mechas que pierden humedad fácilmente, quienes practican natación regularmente, o cualquier persona que busque mantener un cabello saludable, sedoso y manejable.</p>
+
+                    <p>También es excelente como tratamiento preventivo para mantener la salud capilar y preparatorio para procesos químicos.</p>
+
+                    <div class="highlight-box">
+                        <h4>Resultados que Puedes Esperar</h4>
+                        <p>El 96% de nuestras clientes reportan una mejora inmediata en la suavidad al tacto, el 91% observa reducción significativa del frizz desde la primera sesión, y el 94% experimenta mayor facilidad para peinar y manejar su cabello diariamente.</p>
+                    </div>
+
+                    <h3>Frecuencia Recomendada</h3>
+                    <p>Para mantener una hidratación óptima recomendamos:</p>
+
+                    <ul>
+                        <li><strong>Cabello Muy Seco:</strong> 1 sesión cada 2 semanas durante 2 meses.</li>
+                        <li><strong>Mantenimiento Regular:</strong> 1 sesión mensual después del tratamiento inicial.</li>
+                        <li><strong>Prevención:</strong> 1 sesión cada 6 semanas para cabellos normales.</li>
+                        <li><strong>Verano/Invierno:</strong> Sesiones extras según necesidades estacionales.</li>
+                        <li><strong>Duración de Sesión:</strong> 60-75 minutos según condición capilar.</li>
+                        <li><strong>Resultados Inmediatos:</strong> Cambio notable desde la primera aplicación.</li>
+                    </ul>
+
+                    <h3>Cuidados Posteriores al Tratamiento</h3>
+                    <p>Para prolongar los resultados de tu hidratación en Mosquera:</p>
+
+                    <ul>
+                        <li>Usar shampoo y acondicionador sin sulfatos recomendados por tu especialista.</li>
+                        <li>Evitar lavar el cabello con agua muy caliente.</li>
+                        <li>Aplicar productos leave-in hidratantes diariamente.</li>
+                        <li>Reducir el uso de planchas y secadores a temperatura alta.</li>
+                        <li>Usar protector térmico siempre que apliques calor.</li>
+                        <li>Proteger el cabello del sol y cloro con productos específicos.</li>
+                        <li>Mantener una alimentación rica en agua y nutrientes hidratantes.</li>
+                    </ul>
+
+                    <h3>Contraindicaciones y Precauciones</h3>
+                    <p>Este tratamiento tiene mínimas consideraciones:</p>
+
+                    <ul>
+                        <li><strong>Absolutas:</strong> Alergias conocidas a los componentes específicos.</li>
+                        <li><strong>Relativas:</strong> Dermatitis activa en el cuero cabelludo (consultar previamente).</li>
+                        <li><strong>Temporales:</strong> Heridas o irritaciones recientes en el cuero cabelludo.</li>
+                        <li><strong>Precauciones:</strong> Cabellos con exceso de grasa (adaptamos la fórmula).</li>
+                    </ul>
+
+                    <h3>Preguntas Frecuentes</h3>
+                    <p><strong>¿La hidratación engrasa el cabello?</strong> No, nuestra fórmula está balanceada para hidratar sin engrasar, adaptándose a cada tipo de cabello.</p>
+
+                    <p><strong>¿Puedo alisar mi cabello después del tratamiento?</strong> Sí, de hecho es recomendable hacerlo para sellar la hidratación, siempre con protector térmico.</p>
+
+                    <p><strong>¿Es compatible con cabellos teñidos?</strong> Totalmente compatible, además ayuda a mantener el color por más tiempo.</p>
+
+                    <p><strong>¿Notaré diferencia inmediatamente?</strong> Sí, la mayoría de nuestros clientes sienten el cambio en textura y suavidad desde la primera sesión.</p>
+
+                    <h3>¿Por Qué Elegir Estética Lisamar?</h3>
+                    <p>Nuestro equipo de especialistas en salud capilar cuenta con certificación profesional en técnicas de hidratación avanzada. Utilizamos productos de primera calidad, tecnología especializada y un enfoque personalizado que garantiza resultados visibles y duraderos para tu cabello.</p>
+
+                    <p>Cada sesión es diseñada específicamente para las necesidades hídricas de tu cabello, creando una experiencia que no solo transforma tu melena, sino que también te educa sobre el mantenimiento adecuado para prolongar los resultados en casa.</p>
+                </div>
+
+                <div class="sidebar">
+                    <h3>Agenda tu Tratamiento</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span style="font-size: 20px; color: var(--gold);">📱</span>
+                            <a href="tel:+573135197957">+57 313 519 7957</a>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <span style="font-size: 20px; color: var(--gold);">📍</span>
+                            <span>Mosquera, Cundinamarca</span>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <span style="font-size: 20px; color: var(--gold);">🕒</span>
+                            <span>Lun - Sáb: 8:00 AM - 6:00 PM</span>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <img src="instagram.jpg" alt="Instagram"
+                                style="width: 22px; height: 22px; margin-right: 8px;">
+                            <a href="https://www.instagram.com/estetica_lisamar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                            target="_blank">
+                            @estetica_lisamar
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/573135197957" class="btn btn-primary" style="width: 100%; text-align: center; display: block;">Contactar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Areas de Servicio -->
+    <section class="areas-section">
+        <div class="areas-container">
+            <h2 class="section-title">Áreas de Servicio</h2>
+            <p style="text-align: center; margin-bottom: 3rem; color: var(--text-gray); font-size: 1.1rem;">
+                Ofrecemos Hidratación Capilar Profesional en Mosquera y municipios cercanos
+            </p>
+            
+            <div class="areas-list">
+                
+                <div class="area-item">
+                    <h4>Madrid</h4>
+                    <p>Veredas Boyero y La Estancia entre el Río Subachoque, cerro Tibayatá y humedal Laguna de la Herrera y su conurbación con el sector de Casablanca</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Funza</h4>
+                    <p>Conurbación San Andrés y La Ramada del Hato. Hidratación capilar profesional cerca de ti.</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Bojacá</h4>
+                    <p>Atendemos en todo el municipio de Bojacá con nuestros tratamientos de spa y bienestar especializados.</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Bogotá - Kennedy</h4>
+                    <p>Localidades de Kennedy y Fontibón (desde el Aeropuerto El Dorado hasta la UPZ Las Margaritas Calle 49 Sur)</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Soacha</h4>
+                    <p>Corregimiento 2, vereda Canoas y Corregimiento 2, vereda Bosatama. Tratamientos capilares de calidad.</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Bogotá - Bosa</h4>
+                    <p>Localidad de Bosa (desde la UPZ El Porvenir - Calle 49 Sur- y Tintal Sur hasta desembocadura del Río Tunjuelo)</p>
+                </div>
+
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="color: var(--text-gray); margin-bottom: 2rem;">
+                    ¿No encuentras tu zona? ¡Contáctanos! Evaluamos la posibilidad de extender nuestros servicios.
+                </p>
+                <a href="https://wa.me/573135197957" class="btn btn-primary">Consultar Cobertura</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/573135197957" class="whatsapp-float">
+        <img src="whatsapp.png" alt="WhatsApp" 
+            style="width: 22px; height: 22px; margin-right: 8px;">
+        <span>WhatsApp</span>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Estética Lisamar - Body Beautiful. Todos los derechos reservados.</p>
+            <p>Hidratación Capilar Profesional en Mosquera - Sedosidad y suavidad que transforman tu melena</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camuflaje y Eliminación de Estrías en Mosquera | Esteticista - Estética Lisamar</title>
+    <meta name="description" content="Camuflaje y eliminación de estrías en Mosquera especializado en reducir y disimular marcas cutáneas. Estética Lisamar - Body Beautiful.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #D4AF37;
+            --dark-gold: #B8941F;
+            --light-gold: #F4E4A6;
+            --white: #FFFFFF;
+            --off-white: #FEFEFE;
+            --light-gray: #F8F8F8;
+            --dark-gray: #333333;
+            --text-gray: #666666;
+            --brown: #4A3428;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+        }
+
+        .header {
+            background: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 60px;
+            width: auto;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--gold);
+            border: 2px solid var(--gold);
+        }
+
+        .btn-secondary:hover {
+            background: var(--light-gold);
+            transform: translateY(-2px);
+        }
+
+        .breadcrumb {
+            background: var(--light-gray);
+            padding: 1rem 0;
+        }
+
+        .breadcrumb-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .breadcrumb a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--off-white) 0%, var(--light-gray) 100%);
+            padding: 4rem 0;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: var(--brown);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-content .subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .hero-image {
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .content-section {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .main-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: var(--brown);
+            margin-bottom: 2rem;
+        }
+
+        .main-content h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            margin: 2.5rem 0 1.5rem 0;
+        }
+
+        .main-content p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .main-content ul {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .main-content li {
+            color: var(--text-gray);
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
+        }
+
+        .sidebar {
+            background: var(--light-gray);
+            padding: 3rem;
+            border-radius: 15px;
+            height: fit-content;
+            position: sticky;
+            top: 120px;
+        }
+
+        .sidebar h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--brown);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .contact-info {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .contact-item a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .areas-section {
+            background: linear-gradient(135deg, var(--light-gray), var(--off-white));
+            padding: 6rem 0;
+        }
+
+        .areas-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            text-align: center;
+            color: var(--brown);
+            margin-bottom: 4rem;
+        }
+
+        .areas-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .area-item {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 2px solid transparent;
+        }
+
+        .area-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            border-color: var(--gold);
+        }
+
+        .area-item h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--brown);
+            margin-bottom: 1rem;
+        }
+
+        .area-item p {
+            color: var(--text-gray);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            border-radius: 50px;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        .footer {
+            background: var(--brown);
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer p {
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-gold), rgba(212, 175, 55, 0.1));
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid var(--gold);
+        }
+
+        .highlight-box h4 {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--brown);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .sidebar {
+                position: relative;
+                top: 0;
+            }
+
+            .areas-list {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-buttons {
+                gap: 0.5rem;
+            }
+
+            .btn {
+                padding: 10px 16px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .main-content h2 {
+                font-size: 2rem;
+            }
+
+            .main-content h3 {
+                font-size: 1.5rem;
+            }
+
+            .sidebar {
+                padding: 2rem;
+            }
+
+            .area-item {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/"><img src="logo_limpio.png" alt="Estética Lisamar" class="logo"></a>
+            <div class="nav-buttons">
+                <a href="tel:+573135197957" class="btn btn-secondary">Contacto</a>
+                <a href="../catalogo.html" class="btn btn-primary">Catálogo</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="/">Inicio</a> / <a href="/esteticista-mosquera.html">Esteticista en Mosquera</a> / <span>Camuflaje y Eliminación de Estrías en Mosquera</span>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Camuflaje y Eliminación de Estrías en Mosquera</h1>
+                <div class="subtitle">Recupera la Suavidad y Uniformidad de tu Piel</div>
+                <p>Especialistas en camuflaje y eliminación de estrías en Mosquera, dedicados a ayudarte a reducir y disimular estas marcas cutáneas que afectan la textura y apariencia de tu piel. Nuestros tratamientos están diseñados para estimular la regeneración celular y restaurar la elasticidad natural de la dermis.</p>
+                <p>Utilizamos tecnologías avanzadas y productos especializados que actúan directamente sobre las fibras de colágeno y elastina dañadas, logrando mejoras significativas en la apariencia de estrías tanto rojas como blancas.</p>
+
+                <div class="hero-buttons">
+                    <a href="https://wa.me/573135197957" class="btn btn-primary">Agendar Consulta</a>
+                    <a href="/esteticista-mosquera.html" class="btn btn-secondary">Ver Más Tratamientos</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Espacio para imagen de tratamiento de estrías -->
+                <img src="camuflaje-eliminacion-estrias-mosquera.jpg" alt="Camuflaje y eliminación de estrías en Mosquera - Tratamiento especializado">
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="content-container">
+            <div class="content-grid">
+                <div class="main-content">
+                    <h2>¿Qué son las Estrías?</h2>
+                    <p>Las estrías son lesiones cutáneas que aparecen como bandas paralelas de piel atrófica, finas y arrugadas. Se producen por la ruptura de las fibras de colágeno y elastina en la dermis, generalmente como resultado de un estiramiento excesivo y rápido de la piel. Inicialmente se presentan de color rojizo o violáceo (estríae rubrae) y con el tiempo se vuelven blancas y nacaradas (estríae albae).</p>
+
+                    <p>En Estética Lisamar, nuestro tratamiento de camuflaje y eliminación de estrías en Mosquera aborda tanto las estrías recientes como las antiguas, utilizando diferentes técnicas según el tipo, color y antigüedad de las marcas.</p>
+
+                    <div class="highlight-box">
+                        <h4>Tipos de Estrías que Tratamos</h4>
+                        <p>Estrías rojas (recientes), estrías blancas (antiguas), estrías de embarazo, estrías puberales, estrías por aumento muscular, estrías por cambios bruscos de peso y estrías atróficas.</p>
+                    </div>
+
+                    <h3>Causas Principales de las Estrías</h3>
+                    <p>Las estrías pueden aparecer por diversos factores que afectan la elasticidad de la piel:</p>
+
+                    <ul>
+                        <li><strong>Embarazo:</strong> Estiramiento abdominal y mamario durante la gestación.</li>
+                        <li><strong>Cambios Bruscos de Peso:</strong> Aumento o pérdida rápida de peso.</li>
+                        <li><strong>Pubertad:</strong> Crecimiento acelerado durante la adolescencia.</li>
+                        <li><strong>Factores Genéticos:</strong> Predisposición familiar a desarrollar estrías.</li>
+                        <li><strong>Entrenamiento Muscular Intenso:</strong> Aumento rápido de masa muscular.</li>
+                        <li><strong>Enfermedades Endocrinas:</strong> Síndrome de Cushing o tratamientos con corticoides.</li>
+                        <li><strong>Hidratación Insuficiente:</strong> Piel deshidratada con menor elasticidad.</li>
+                    </ul>
+
+                    <h3>Tecnologías para Tratamiento de Estrías</h3>
+                    <p>Nuestro centro de camuflaje y eliminación de estrías en Mosquera utiliza las tecnologías más avanzadas:</p>
+
+                    <ul>
+                        <li><strong>Microagujas con Dermapen:</strong> Estimula la producción de colágeno mediante microperforaciones controladas.</li>
+                        <li><strong>Radiofrecuencia Fraccionada:</strong> Calor controlado que regenera las fibras de colágeno dañadas.</li>
+                        <li><strong>Láser CO2 Fraccionado:</strong> Renovación celular profunda para estrías blancas.</li>
+                        <li><strong>Láser de Colorante Pulsado:</strong> Ideal para estrías rojas, reduce la vascularización.</li>
+                        <li><strong>Carboxiterapia:</strong> Inyecciones de CO2 que mejoran la oxigenación tisular.</li>
+                        <li><strong>Plasma Rico en Plaquetas (PRP):</strong> Factores de crecimiento que estimulan la regeneración.</li>
+                        <li><strong>Microdermoabrasión:</strong> Exfoliación controlada que renueva las capas superficiales.</li>
+                    </ul>
+
+                    <h3>¿En Qué Consiste el Camuflaje de Estrías?</h3>
+                    <p>El camuflaje de estrías es una técnica especializada que busca igualar el tono de las estrías con el color de la piel circundante:</p>
+
+                    <ul>
+                        <li><strong>Pigmentación Corporal:</strong> Aplicación de pigmentos naturales que igualan el tono.</li>
+                        <strong>Micropigmentación:</strong> Técnica semipermanente para estrías blancas.</li>
+                        <li><strong>Corrección de Color:</strong> Neutralización de tonos rojizos o blanquecinos.</li>
+                        <li><strong>Técnica de Puntillismo:</strong> Aplicación precisa de pigmento en las estrías.</li>
+                        <li><strong>Personalización de Color:</strong> Mezcla específica para cada tipo de piel.</li>
+                        <li><strong>Sesiones Progresivas:</strong> Resultados naturales que se construyen gradualmente.</li>
+                    </ul>
+
+                    <h3>¿Quiénes son Candidatos Ideales?</h3>
+                    <p>Nuestros tratamientos de camuflaje y eliminación de estrías están indicados para:</p>
+
+                    <ul>
+                        <li><strong>Mujeres Post-Embarazo:</strong> Que desean mejorar estrías abdominales y mamarias.</li>
+                        <li><strong>Personas con Cambios de Peso:</strong> Que han desarrollado estrías por fluctuaciones corporales.</li>
+                        <li><strong>Adolescentes:</strong> Con estrías por crecimiento puberal en caderas y muslos.</li>
+                        <li><strong>Deportistas:</strong> Con estrías por aumento muscular rápido.</li>
+                        <li><strong>Pacientes con Estrías Antiguas:</strong> Que buscan mejorar marcas blancas establecidas.</li>
+                        <li><strong>Prevención:</strong> Personas con predisposición que desean evitar nuevas estrías.</li>
+                    </ul>
+
+                    <p>Realizamos una evaluación completa para determinar el protocolo más adecuado según el tipo, color y localización de las estrías.</p>
+
+                    <div class="highlight-box">
+                        <h4>Resultados Comprobados</h4>
+                        <p>Nuestros tratamientos han demostrado una mejoría del 60-80% en la apariencia de las estrías, con reducción significativa de profundidad, longitud y visibilidad de las marcas.</p>
+                    </div>
+
+                    <h3>Protocolo de Tratamiento Personalizado</h3>
+                    <p>Cada sesión de camuflaje y eliminación de estrías tiene una duración de 60 a 90 minutos e incluye:</p>
+
+                    <ul>
+                        <li>Evaluación detallada del tipo y estado de las estrías</li>
+                        <li>Limpieza y preparación de la zona a tratar</li>
+                        <li>Aplicación de anestesia tópica si es necesario</li>
+                        <li>Tratamiento principal según el protocolo establecido</li>
+                        <li>Aplicación de productos regeneradores y calmantes</li>
+                        <li>Explicación de cuidados post-tratamiento</li>
+                    </ul>
+
+                    <h3>Número de Sesiones Recomendadas</h3>
+                    <p>Para obtener resultados óptimos en camuflaje y eliminación de estrías recomendamos:</p>
+
+                    <ul>
+                        <li><strong>Estrías Rojas (Recientes):</strong> 4-6 sesiones con intervalo de 3-4 semanas</li>
+                        <li><strong>Estrías Blancas (Antiguas):</strong> 6-10 sesiones con intervalo de 4-6 semanas</li>
+                        <li><strong>Camuflaje con Micropigmentación:</strong> 2-3 sesiones con intervalo de 4-6 semanas</li>
+                        <li><strong>Tratamientos Combinados:</strong> 8-12 sesiones según la combinación de técnicas</li>
+                        <li><strong>Mantenimiento:</strong> Sesiones anuales para mantener resultados</li>
+                    </ul>
+
+                    <p>Los resultados son progresivos y se optimizan con cada sesión, siendo visibles mejorías desde el primer mes de tratamiento.</p>
+
+                    <h3>Cuidados Post-Tratamiento</h3>
+                    <p>Para optimizar y mantener los resultados del tratamiento, proporcionamos recomendaciones específicas:</p>
+
+                    <ul>
+                        <li>Evitar exposición solar directa durante 2 semanas post-tratamiento</li>
+                        <li>Usar protector solar alto (FPS 50+) en las zonas tratadas</li>
+                        <li>Aplicar cremas regeneradoras con colágeno, elastina y vitamina E</li>
+                        <li>Mantener una hidratación adecuada (2-3 litros de agua diarios)</li>
+                        <li>Evitar ropa ajustada que pueda irritar la zona tratada</li>
+                        <li>Seguir una alimentación rica en vitaminas A, C y E</li>
+                        <li>No rascar ni frotar las zonas en proceso de cicatrización</li>
+                    </ul>
+
+                    <h3>Diferencia Entre Eliminación y Camuflaje</h3>
+                    <p>Es importante entender la diferencia entre estos dos enfoques:</p>
+
+                    <ul>
+                        <li><strong>Eliminación:</strong> Busca reducir la profundidad y tamaño de las estrías mediante regeneración celular.</li>
+                        <li><strong>Camuflaje:</strong> Enfocado en igualar el color de las estrías con la piel circundante.</li>
+                        <li><strong>Estrías Rojas:</strong> Responden mejor a tratamientos de eliminación.</li>
+                        <li><strong>Estrías Blancas:</strong> Pueden requerir combinación de eliminación y camuflaje.</li>
+                        <li><strong>Resultados:</strong> La eliminación mejora textura, el camuflaje mejora color.</li>
+                        <li><strong>Duración:</strong> La eliminación es permanente, el camuflaje puede requerir retoques.</li>
+                    </ul>
+
+                    <h3>Prevención de Nuevas Estrías</h3>
+                    <p>Además del tratamiento, proporcionamos recomendaciones para prevenir la aparición de nuevas estrías:</p>
+
+                    <ul>
+                        <li>Mantener una hidratación cutánea constante con cremas específicas</li>
+                        <li>Controlar el peso evitando fluctuaciones bruscas</li>
+                        <li>Segui una alimentación equilibrada rica en proteínas y vitaminas</li>
+                        <li>Realizar ejercicio regular para mantener la elasticidad cutánea</li>
+                        <li>Usar fajas o prendas de compresión durante el embarazo</li>
+                        <li>Masajear regularmente las zonas propensas con aceites nutritivos</li>
+                        <li>Beber suficiente agua para mantener la piel hidratada desde dentro</li>
+                    </ul>
+
+                    <h3>¿Por Qué Elegir Estética Lisamar?</h3>
+                    <p>Somos especialistas reconocidos en camuflaje y eliminación de estrías en Mosquera, con amplia experiencia en el tratamiento de estas marcas cutáneas. Nuestro enfoque personalizado combina diferentes tecnologías según las características específicas de cada caso.</p>
+
+                    <p>Contamos con equipos de última generación y seguimos protocolos médicos especializados que nos permiten lograr mejoras significativas en la apariencia de las estrías, ayudándote a recuperar la suavidad y uniformidad de tu piel con resultados naturales y duraderos.</p>
+                </div>
+
+                <div class="sidebar">
+                    <h3>Agenda tu Consulta</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span style="font-size: 20px; color: var(--gold);">📱</span>
+                            <a href="tel:+573135197957">+57 313 519 7957</a>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <span style="font-size: 20px; color: var(--gold);">📍</span>
+                            <span>Mosquera, Cundinamarca</span>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <span style="font-size: 20px; color: var(--gold);">🕒</span>
+                            <span>Lun - Sáb: 8:00 AM - 6:00 PM</span>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <img src="instagram.jpg" alt="Instagram"
+                                style="width: 22px; height: 22px; margin-right: 8px;">
+                            <a href="https://www.instagram.com/estetica_lisamar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                            target="_blank">
+                            @estetica_lisamar
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/573135197957" class="btn btn-primary" style="width: 100%; text-align: center; display: block;">Contactar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Areas de Servicio -->
+    <section class="areas-section">
+        <div class="areas-container">
+            <h2 class="section-title">Áreas de Servicio</h2>
+            <p style="text-align: center; margin-bottom: 3rem; color: var(--text-gray); font-size: 1.1rem;">
+                Ofrecemos camuflaje y eliminación de estrías en Mosquera y municipios cercanos
+            </p>
+            
+            <div class="areas-list">
+                
+                <div class="area-item">
+                    <h4>Madrid</h4>
+                    <p>Veredas Boyero y La Estancia entre el Río Subachoque, cerro Tibayatá y humedal Laguna de la Herrera y su conurbación con el sector de Casablanca</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Funza</h4>
+                    <p>Conurbación San Andrés y La Ramada del Hato. Tratamiento de estrías profesional cerca de ti.</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Bojacá</h4>
+                    <p>Atendemos en todo el municipio de Bojacá con nuestros tratamientos especializados en eliminación de estrías.</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Bogotá - Kennedy</h4>
+                    <p>Localidades de Kennedy y Fontibón (desde el Aeropuerto El Dorado hasta la UPZ Las Margaritas Calle 49 Sur)</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Soacha</h4>
+                    <p>Corregimiento 2, vereda Canoas y Corregimiento 2, vereda Bosatama. Eliminación de estrías de alta calidad.</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Bogotá - Bosa</h4>
+                    <p>Localidad de Bosa (desde la UPZ El Porvenir - Calle 49 Sur- y Tintal Sur hasta desembocadura del Río Tunjuelo)</p>
+                </div>
+
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="color: var(--text-gray); margin-bottom: 2rem;">
+                    ¿No encuentras tu zona? ¡Contáctanos! Evaluamos la posibilidad de extender nuestros servicios.
+                </p>
+                <a href="https://wa.me/573135197957" class="btn btn-primary">Consultar Cobertura</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/573135197957" class="whatsapp-float">
+        <img src="whatsapp.png" alt="WhatsApp" 
+            style="width: 22px; height: 22px; margin-right: 8px;">
+        <span>WhatsApp</span>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Estética Lisamar - Body Beautiful. Todos los derechos reservados.</p>
+            <p>Camuflaje y eliminación de estrías en Mosquera - Recupera la suavidad y uniformidad de tu piel</p>
+        </div>
+    </footer>
+</body>
+</html>

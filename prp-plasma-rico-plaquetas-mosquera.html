@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRP Plasma Rico en Plaquetas en Mosquera | Spa Médico - Estética Lisamar</title>
+    <meta name="description" content="PRP Plasma Rico en Plaquetas en Mosquera para regeneración facial, capilar y corporal. Tratamiento con factores de crecimiento autólogo. Estética Lisamar - Body Beautiful.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #D4AF37;
+            --dark-gold: #B8941F;
+            --light-gold: #F4E4A6;
+            --white: #FFFFFF;
+            --off-white: #FEFEFE;
+            --light-gray: #F8F8F8;
+            --dark-gray: #333333;
+            --text-gray: #666666;
+            --brown: #4A3428;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+        }
+
+        .header {
+            background: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 60px;
+            width: auto;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--gold);
+            border: 2px solid var(--gold);
+        }
+
+        .btn-secondary:hover {
+            background: var(--light-gold);
+            transform: translateY(-2px);
+        }
+
+        .breadcrumb {
+            background: var(--light-gray);
+            padding: 1rem 0;
+        }
+
+        .breadcrumb-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .breadcrumb a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--off-white) 0%, var(--light-gray) 100%);
+            padding: 4rem 0;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: var(--brown);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-content .subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .hero-image {
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .content-section {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .main-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: var(--brown);
+            margin-bottom: 2rem;
+        }
+
+        .main-content h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            margin: 2.5rem 0 1.5rem 0;
+        }
+
+        .main-content p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .main-content ul {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .main-content li {
+            color: var(--text-gray);
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
+        }
+
+        .sidebar {
+            background: var(--light-gray);
+            padding: 3rem;
+            border-radius: 15px;
+            height: fit-content;
+            position: sticky;
+            top: 120px;
+        }
+
+        .sidebar h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--brown);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .contact-info {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .contact-item a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .areas-section {
+            background: linear-gradient(135deg, var(--light-gray), var(--off-white));
+            padding: 6rem 0;
+        }
+
+        .areas-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            text-align: center;
+            color: var(--brown);
+            margin-bottom: 4rem;
+        }
+
+        .areas-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .area-item {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 2px solid transparent;
+        }
+
+        .area-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            border-color: var(--gold);
+        }
+
+        .area-item h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--brown);
+            margin-bottom: 1rem;
+        }
+
+        .area-item p {
+            color: var(--text-gray);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            border-radius: 50px;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        .footer {
+            background: var(--brown);
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer p {
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-gold), rgba(212, 175, 55, 0.1));
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid var(--gold);
+        }
+
+        .highlight-box h4 {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--brown);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .sidebar {
+                position: relative;
+                top: 0;
+            }
+
+            .areas-list {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-buttons {
+                gap: 0.5rem;
+            }
+
+            .btn {
+                padding: 10px 16px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .main-content h2 {
+                font-size: 2rem;
+            }
+
+            .main-content h3 {
+                font-size: 1.5rem;
+            }
+
+            .sidebar {
+                padding: 2rem;
+            }
+
+            .area-item {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/"><img src="logo_limpio.png" alt="Estética Lisamar" class="logo"></a>
+            <div class="nav-buttons">
+                <a href="tel:+573135197957" class="btn btn-secondary">Contacto</a>
+                <a href="../catalogo.html" class="btn btn-primary">Catálogo</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="/">Inicio</a> / <a href="/spa-medico-mosquera.html">Spa Médico en Mosquera</a> / <span>PRP Plasma Rico en Plaquetas en Mosquera</span>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>PRP Plasma Rico en Plaquetas en Mosquera</h1>
+                <div class="subtitle">Regeneración Natural con tus Propias Células</div>
+                <p>Ofrecemos el tratamiento más avanzado de PRP (Plasma Rico en Plaquetas) en Mosquera, una técnica revolucionaria que utiliza los factores de crecimiento de tu propia sangre para estimular la regeneración celular natural. Nuestro procedimiento médico especializado activa los mecanismos de reparación del organismo para tratar múltiples condiciones estéticas y médicas.</p>
+                <p>Utilizamos tecnología de última generación y protocolos médicos estrictos para procesar tu plasma rico en plaquetas, garantizando la máxima concentración de factores de crecimiento y resultados óptimos en rejuvenecimiento facial, capilar y regeneración tisular.</p>
+
+                <div class="hero-buttons">
+                    <a href="https://wa.me/573135197957" class="btn btn-primary">Agendar Consulta</a>
+                    <a href="/spa-medico-mosquera.html" class="btn btn-secondary">Ver Más Tratamientos</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Espacio para imagen principal de PRP -->
+                <img src="prp-plasma-rico-plaquetas-mosquera.jpg" alt="PRP Plasma Rico en Plaquetas en Mosquera - Tratamiento médico especializado">
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="content-container">
+            <div class="content-grid">
+                <div class="main-content">
+                    <h2>¿Qué es el PRP Plasma Rico en Plaquetas?</h2>
+                    <p>El PRP (Plasma Rico en Plaquetas) es un tratamiento médico regenerativo que utiliza los componentes de la propia sangre del paciente para estimular la curación y regeneración de tejidos. Las plaquetas contienen numerosos factores de crecimiento que, cuando se activan, desencadenan procesos de reparación celular, formación de nuevos vasos sanguíneos y estimulación de colágeno.</p>
+
+                    <p>En Estética Lisamar realizamos el procedimiento de PRP bajo estrictos protocolos médicos, utilizando equipos especializados para la obtención y procesamiento del plasma, asegurando la máxima calidad y seguridad en cada tratamiento.</p>
+
+                    <div class="highlight-box">
+                        <h4>Beneficios del Tratamiento con PRP</h4>
+                        <p>Regeneración celular natural, estimulación de colágeno y elastina, rejuvenecimiento facial no invasivo, tratamiento de alopecia y caída capilar, cicatrización de heridas y estrías, reducción de arrugas y líneas de expresión, y mejora de la textura y tono de la piel.</p>
+                    </div>
+
+                    <h3>¿Cómo Funciona el Proceso de PRP?</h3>
+                    <p>El tratamiento con PRP sigue un protocolo científico preciso:</p>
+
+                    <ul>
+                        <li><strong>Extracción de Sangre:</strong> Se toma una pequeña muestra de sangre venosa del paciente.</li>
+                        <li><strong>Centrifugación Especializada:</strong> La sangre se procesa en una centrífuga médica para separar los componentes.</li>
+                        <li><strong>Obtención del Plasma Rico:</strong> Se aísla el plasma con alta concentración de plaquetas.</li>
+                        <li><strong>Activación de Plaquetas:</strong> Se activan los factores de crecimiento antes de la aplicación.</li>
+                        <li><strong>Aplicación Personalizada:</strong> Se inyecta el PRP en las áreas específicas a tratar.</li>
+                        <li><strong>Activación de Procesos Regenerativos:</strong> Los factores de crecimiento estimulan la reparación celular.</li>
+                    </ul>
+
+                    <h3>Aplicaciones del PRP en Medicina Estética</h3>
+                    <p>Nuestro tratamiento de PRP en Mosquera se aplica en múltiples áreas:</p>
+
+                    <ul>
+                        <li><strong>Rejuvenecimiento Facial:</strong> Mejora de arrugas, flacidez y calidad de la piel.</li>
+                        <li><strong>Tratamiento Capilar:</strong> Estimulación del crecimiento del cabello en alopecia.</li>
+                        <li><strong>Regeneración de Manos:</strong> Rejuvenecimiento del dorso de las manos.</li>
+                        <li><strong>Cuello y Escote:</strong> Mejora de la textura y firmeza.</li>
+                        <li><strong>Cicatrices y Estrías:</strong> Regeneración de tejido dañado.</li>
+                        <li><strong>Contorno de Ojos:</strong> Tratamiento de ojeras y patas de gallo.</li>
+                        <li><strong>Mejora de Poros:</strong> Reducción de poros dilatados.</li>
+                    </ul>
+
+                    <h3>Ventajas del PRP sobre Otros Tratamientos</h3>
+                    <p>El PRP ofrece beneficios únicos comparado con otros procedimientos estéticos:</p>
+
+                    <ul>
+                        <li><strong>100% Natural:</strong> Utiliza los componentes de tu propia sangre.</li>
+                        <li><strong>Mínimo Riesgo de Alergias:</strong> Al ser autólogo, no hay rechazo.</li>
+                        <li><strong>Resultados Progresivos y Naturales:</strong> Mejora continua durante meses.</li>
+                        <li><strong>Estimulación Prolongada:</strong> Los efectos perduran mucho después del tratamiento.</li>
+                        <li><strong>Versatilidad:</strong> Aplicable en múltiples áreas del cuerpo.</li>
+                        <li><strong>Seguridad:</strong> Procedimiento mínimamente invasivo.</li>
+                        <li><strong>Sin Tiempo de Recuperación:</strong> Retorno inmediato a actividades normales.</li>
+                    </ul>
+
+                    <h3>Protocolo Médico del Tratamiento</h3>
+                    <p>Nuestro protocolo de PRP en Mosquera incluye los siguientes pasos especializados:</p>
+
+                    <ul>
+                        <li><strong>Evaluación Médica:</strong> Historia clínica completa y análisis de indicaciones.</li>
+                        <li><strong>Preparación:</strong> Instrucciones previas al tratamiento.</li>
+                        <li><strong>Extracción Sanguínea:</strong> Toma de 20-60 ml de sangre venosa.</li>
+                        <li><strong>Procesamiento:</strong> Centrifugación en equipos médicos especializados.</li>
+                        <li><strong>Obtención del PRP:</strong> Separación del plasma rico en plaquetas.</li>
+                        <li><strong>Aplicación:</strong> Técnicas de microinyección o mesoterapia según el área.</li>
+                        <li><strong>Cuidados Post-tratamiento:</strong> Instrucciones específicas para cada caso.</li>
+                        <li><strong>Seguimiento:</strong> Control evolutivo y programación de sesiones.</li>
+                    </ul>
+
+                    <h3>¿Para Quién es Ideal el Tratamiento con PRP?</h3>
+                    <p>El PRP es ideal para personas entre 30-65 años que buscan rejuvenecimiento natural, pacientes con alopecia androgenética o caída capilar, quienes desean mejorar la calidad de su piel sin productos sintéticos, o personas que prefieren tratamientos biológicos y autólogos.</p>
+
+                    <p>También es perfecto como complemento de otros procedimientos estéticos y como tratamiento preventivo del envejecimiento.</p>
+
+                    <div class="highlight-box">
+                        <h4>Resultados Científicamente Comprobados</h4>
+                        <p>Estudios clínicos demuestran que el PRP puede aumentar la densidad capilar hasta en un 30%, mejorar la elasticidad cutánea en un 40% y reducir la profundidad de arrugas hasta en un 60% después de completar el protocolo de tratamiento.</p>
+                    </div>
+
+                    <h3>Número de Sesiones Recomendadas</h3>
+                    <p>Para obtener resultados óptimos con PRP recomendamos:</p>
+
+                    <ul>
+                        <li><strong>Tratamiento Facial:</strong> 3-4 sesiones con intervalo de 4 semanas.</li>
+                        <li><strong>Tratamiento Capilar:</strong> 4-6 sesiones con intervalo de 3-4 semanas.</li>
+                        <li><strong>Mantenimiento Facial:</strong> 1-2 sesiones anuales.</li>
+                        <li><strong>Mantenimiento Capilar:</strong> 2-3 sesiones anuales.</li>
+                        <li><strong>Resultados Iniciales:</strong> Visibles a las 3-4 semanas.</li>
+                        <li><strong>Resultados Máximos:</strong> Entre 3-6 meses después del tratamiento.</li>
+                    </ul>
+
+                    <h3>Factores de Crecimiento en el PRP</h3>
+                    <p>El PRP contiene múltiples factores de crecimiento que actúan sinérgicamente:</p>
+
+                    <ul>
+                        <li><strong>PDGF:</strong> Estimula la división celular y formación de vasos sanguíneos.</li>
+                        <li><strong>TGF-β:</strong> Promueve la producción de matriz extracelular.</li>
+                        <li><strong>VEGF:</strong> Induce la formación de nuevos capilares.</li>
+                        <li><strong>EGF:</strong> Estimula el crecimiento y diferenciación celular.</li>
+                        <li><strong>FGF:</strong> Promueve la angiogénesis y síntesis de colágeno.</li>
+                        <li><strong>IGF:</strong> Regula el metabolismo celular y crecimiento.</li>
+                    </ul>
+
+                    <h3>Cuidados Post-Tratamiento</h3>
+                    <p>Después de tu tratamiento con PRP en Mosquera, es importante seguir estas recomendaciones:</p>
+
+                    <ul>
+                        <li>Evitar exposición solar directa durante 2 semanas.</li>
+                        <li>No aplicar maquillaje durante las primeras 24 horas.</li>
+                        <li>Evitar ejercicio intenso durante 48 horas post-tratamiento.</li>
+                        <li>No tomar antiinflamatorios durante la primera semana.</li>
+                        <li>Mantener una hidratación adecuada (2-3 litros de agua diarios).</li>
+                        <li>Usar protector solar de amplio espectro diariamente.</li>
+                        <li>Seguir una alimentación rica en proteínas y vitaminas.</li>
+                    </ul>
+
+                    <h3>Contraindicaciones y Precauciones</h3>
+                    <p>El PRP tiene algunas contraindicaciones importantes:</p>
+
+                    <ul>
+                        <li><strong>Absolutas:</strong> Trastornos de coagulación, trombocitopenia, cáncer activo.</li>
+                        <li><strong>Relativas:</strong> Enfermedades autoinmunes, tratamiento anticoagulante.</li>
+                        <li><strong>Temporales:</strong> Infecciones activas, fiebre, embarazo y lactancia.</li>
+                        <li><strong>Precauciones:</strong> Historia de cicatrización queloide, enfermedades hepáticas.</li>
+                    </ul>
+
+                    <h3>Preguntas Frecuentes</h3>
+                    <p><strong>¿Duele el tratamiento?</strong> Se utiliza anestesia tópica para mayor comodidad, siendo bien tolerado por la mayoría de pacientes.</p>
+
+                    <p><strong>¿Cuánto tiempo dura el procedimiento?</strong> Todo el proceso, desde la extracción hasta la aplicación, toma aproximadamente 60-90 minutos.</p>
+
+                    <p><strong>¿Los resultados son permanentes?</strong> Los efectos son prolongados pero requieren mantenimiento periódico para resultados óptimos.</p>
+
+                    <p><strong>¿Se puede combinar con otros tratamientos?</strong> Sí, el PRP potencia los resultados de otros procedimientos estéticos.</p>
+
+                    <h3>¿Por Qué Elegir Estética Lisamar?</h3>
+                    <p>Nuestro equipo médico especializado en tratamientos con PRP cuenta con certificación y amplia experiencia en procedimientos regenerativos. Utilizamos equipos médicos de última generación y seguimos protocolos estrictos de esterilización y seguridad.</p>
+
+                    <p>Cada tratamiento es supervisado por profesionales médicos que garantizan la correcta indicación, técnica y seguimiento, asegurando resultados seguros, naturales y basados en evidencia científica.</p>
+                </div>
+
+                <div class="sidebar">
+                    <h3>Agenda tu Consulta</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span style="font-size: 20px; color: var(--gold);">📱</span>
+                            <a href="tel:+573135197957">+57 313 519 7957</a>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <span style="font-size: 20px; color: var(--gold);">📍</span>
+                            <span>Mosquera, Cundinamarca</span>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <span style="font-size: 20px; color: var(--gold);">🕒</span>
+                            <span>Lun - Sáb: 8:00 AM - 6:00 PM</span>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <img src="instagram.jpg" alt="Instagram"
+                                style="width: 22px; height: 22px; margin-right: 8px;">
+                            <a href="https://www.instagram.com/estetica_lisamar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                            target="_blank">
+                            @estetica_lisamar
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/573135197957" class="btn btn-primary" style="width: 100%; text-align: center; display: block;">Contactar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Areas de Servicio -->
+    <section class="areas-section">
+        <div class="areas-container">
+            <h2 class="section-title">Áreas de Servicio</h2>
+            <p style="text-align: center; margin-bottom: 3rem; color: var(--text-gray); font-size: 1.1rem;">
+                Ofrecemos PRP Plasma Rico en Plaquetas en Mosquera y municipios cercanos
+            </p>
+            
+            <div class="areas-list">
+                
+                <div class="area-item">
+                    <h4>Madrid</h4>
+                    <p>Veredas Boyero y La Estancia entre el Río Subachoque, cerro Tibayatá y humedal Laguna de la Herrera y su conurbación con el sector de Casablanca</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Funza</h4>
+                    <p>Conurbación San Andrés y La Ramada del Hato. PRP profesional cerca de ti.</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Bojacá</h4>
+                    <p>Atendemos en todo el municipio de Bojacá con nuestros tratamientos de spa médico especializados.</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Bogotá - Kennedy</h4>
+                    <p>Localidades de Kennedy y Fontibón (desde el Aeropuerto El Dorado hasta la UPZ Las Margaritas Calle 49 Sur)</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Soacha</h4>
+                    <p>Corregimiento 2, vereda Canoas y Corregimiento 2, vereda Bosatama. Tratamientos médicos de calidad.</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Bogotá - Bosa</h4>
+                    <p>Localidad de Bosa (desde la UPZ El Porvenir - Calle 49 Sur- y Tintal Sur hasta desembocadura del Río Tunjuelo)</p>
+                </div>
+
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="color: var(--text-gray); margin-bottom: 2rem;">
+                    ¿No encuentras tu zona? ¡Contáctanos! Evaluamos la posibilidad de extender nuestros servicios.
+                </p>
+                <a href="https://wa.me/573135197957" class="btn btn-primary">Consultar Cobertura</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/573135197957" class="whatsapp-float">
+        <img src="whatsapp.png" alt="WhatsApp" 
+            style="width: 22px; height: 22px; margin-right: 8px;">
+        <span>WhatsApp</span>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Estética Lisamar - Body Beautiful. Todos los derechos reservados.</p>
+            <p>PRP Plasma Rico en Plaquetas en Mosquera - Regeneración natural con tus propias células</p>
+        </div>
+    </footer>
+</body>
+</html>

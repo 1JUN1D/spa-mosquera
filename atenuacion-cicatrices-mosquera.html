@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atenuación de Cicatrices en Mosquera | Esteticista - Estética Lisamar</title>
+    <meta name="description" content="Atenuación de cicatrices en Mosquera especializada en mejorar la apariencia de marcas cutáneas. Estética Lisamar - Body Beautiful.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #D4AF37;
+            --dark-gold: #B8941F;
+            --light-gold: #F4E4A6;
+            --white: #FFFFFF;
+            --off-white: #FEFEFE;
+            --light-gray: #F8F8F8;
+            --dark-gray: #333333;
+            --text-gray: #666666;
+            --brown: #4A3428;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+        }
+
+        .header {
+            background: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 60px;
+            width: auto;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--gold);
+            border: 2px solid var(--gold);
+        }
+
+        .btn-secondary:hover {
+            background: var(--light-gold);
+            transform: translateY(-2px);
+        }
+
+        .breadcrumb {
+            background: var(--light-gray);
+            padding: 1rem 0;
+        }
+
+        .breadcrumb-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .breadcrumb a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--off-white) 0%, var(--light-gray) 100%);
+            padding: 4rem 0;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: var(--brown);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-content .subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .hero-image {
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .content-section {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .main-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: var(--brown);
+            margin-bottom: 2rem;
+        }
+
+        .main-content h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            margin: 2.5rem 0 1.5rem 0;
+        }
+
+        .main-content p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .main-content ul {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .main-content li {
+            color: var(--text-gray);
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
+        }
+
+        .sidebar {
+            background: var(--light-gray);
+            padding: 3rem;
+            border-radius: 15px;
+            height: fit-content;
+            position: sticky;
+            top: 120px;
+        }
+
+        .sidebar h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--brown);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .contact-info {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .contact-item a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .areas-section {
+            background: linear-gradient(135deg, var(--light-gray), var(--off-white));
+            padding: 6rem 0;
+        }
+
+        .areas-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            text-align: center;
+            color: var(--brown);
+            margin-bottom: 4rem;
+        }
+
+        .areas-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .area-item {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 2px solid transparent;
+        }
+
+        .area-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            border-color: var(--gold);
+        }
+
+        .area-item h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--brown);
+            margin-bottom: 1rem;
+        }
+
+        .area-item p {
+            color: var(--text-gray);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            border-radius: 50px;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        .footer {
+            background: var(--brown);
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer p {
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-gold), rgba(212, 175, 55, 0.1));
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid var(--gold);
+        }
+
+        .highlight-box h4 {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--brown);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .sidebar {
+                position: relative;
+                top: 0;
+            }
+
+            .areas-list {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-buttons {
+                gap: 0.5rem;
+            }
+
+            .btn {
+                padding: 10px 16px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .main-content h2 {
+                font-size: 2rem;
+            }
+
+            .main-content h3 {
+                font-size: 1.5rem;
+            }
+
+            .sidebar {
+                padding: 2rem;
+            }
+
+            .area-item {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/"><img src="logo_limpio.png" alt="Estética Lisamar" class="logo"></a>
+            <div class="nav-buttons">
+                <a href="tel:+573135197957" class="btn btn-secondary">Contacto</a>
+                <a href="../catalogo.html" class="btn btn-primary">Catálogo</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="/">Inicio</a> / <a href="/esteticista-mosquera.html">Esteticista en Mosquera</a> / <span>Atenuación de Cicatrices en Mosquera</span>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Atenuación de Cicatrices en Mosquera</h1>
+                <div class="subtitle">Mejora la Apariencia de tus Marcas Cutáneas</div>
+                <p>Especialistas en atenuación de cicatrices en Mosquera, dedicados a ayudarte a mejorar la apariencia de marcas cutáneas resultantes de cirugías, accidentes, acné o quemaduras. Nuestros tratamientos están diseñados para suavizar, aplanar y uniformar el tono de las cicatrices, devolviendo a tu piel un aspecto más natural y armónico.</p>
+                <p>Utilizamos tecnologías avanzadas y protocolos especializados que estimulan la regeneración celular y reorganizan las fibras de colágeno, logrando mejoras significativas en la textura y coloración de las cicatrices.</p>
+
+                <div class="hero-buttons">
+                    <a href="https://wa.me/573135197957" class="btn btn-primary">Agendar Consulta</a>
+                    <a href="/esteticista-mosquera.html" class="btn btn-secondary">Ver Más Tratamientos</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Espacio para imagen de tratamiento de cicatrices -->
+                <img src="atenuacion-cicatrices-mosquera.jpg" alt="Atenuación de cicatrices en Mosquera - Tratamiento especializado">
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="content-container">
+            <div class="content-grid">
+                <div class="main-content">
+                    <h2>¿Qué es la Atenuación de Cicatrices?</h2>
+                    <p>La atenuación de cicatrices es un conjunto de tratamientos estéticos especializados diseñados para mejorar la apariencia de las cicatrices mediante la estimulación de los procesos naturales de regeneración cutánea. Estos procedimientos buscan reducir el relieve, suavizar la textura, igualar el tono y mejorar la elasticidad de la piel en el área cicatrizada.</p>
+
+                    <p>En Estética Lisamar, nuestra atenuación de cicatrices en Mosquera aborda diferentes tipos de marcas utilizando técnicas específicas según las características de cada cicatriz, su antigüedad y localización.</p>
+
+                    <div class="highlight-box">
+                        <h4>Tipos de Cicatrices que Tratamos</h4>
+                        <p>Cicatrices hipertróficas, cicatrices atróficas, cicatrices queloides, cicatrices post-acné, cicatrices quirúrgicas, cicatrices por quemaduras, cicatrices traumáticas y cicatrices de estrías.</p>
+                    </div>
+
+                    <h3>Proceso de Formación de Cicatrices</h3>
+                    <p>Las cicatrices se forman como resultado del proceso natural de cicatrización de la piel:</p>
+
+                    <ul>
+                        <li><strong>Fase Inflamatoria:</strong> Inmediata después de la lesión, con formación de coágulo.</li>
+                        <li><strong>Fase Proliferativa:</strong> Formación de tejido de granulación y producción de colágeno.</li>
+                        <li><strong>Fase de Remodelación:</strong> Reorganización de las fibras de colágeno durante meses.</li>
+                        <li><strong>Factores que Afectan:</strong> Profundidad de la lesión, localización, edad, genética.</li>
+                        <li><strong>Cicatrización Anormal:</strong> Exceso de colágeno (queloides) o deficiencia (atróficas).</li>
+                        <li><strong>Tiempo de Maduración:</strong> Las cicatrices pueden mejorar hasta 2 años después de formadas.</li>
+                    </ul>
+
+                    <h3>Tecnologías para Atenuación de Cicatrices</h3>
+                    <p>Nuestro centro de atenuación de cicatrices en Mosquera utiliza las tecnologías más avanzadas:</p>
+
+                    <ul>
+                        <li><strong>Láser CO2 Fraccionado:</strong> Renovación celular profunda para cicatrices atróficas.</li>
+                        <li><strong>Láser Erbium YAG:</strong> Más superficial que el CO2, ideal para cicatrices faciales.</li>
+                        <li><strong>Radiofrecuencia Microagujas:</strong> Combina calor y microperforaciones para estimular colágeno.</li>
+                        <li><strong>Microdermoabrasión:</strong> Exfoliación controlada que renueva las capas superficiales.</li>
+                        <li><strong>Peeling Químico:</strong> Aplicación de ácidos para renovar la piel y uniformar el tono.</li>
+                        <li><strong>Plasma Rico en Plaquetas (PRP):</strong> Factores de crecimiento que aceleran la regeneración.</li>
+                        <li><strong>Crioterapia:</strong> Para cicatrices queloides e hipertróficas.</li>
+                    </ul>
+
+                    <h3>¿En Qué Consiste el Tratamiento?</h3>
+                    <p>El proceso de atenuación de cicatrices varía según el tipo de marca y la tecnología utilizada:</p>
+
+                    <ul>
+                        <li><strong>Evaluación Inicial:</strong> Análisis del tipo, profundidad y antigüedad de la cicatriz.</li>
+                        <li><strong>Preparación de la Piel:</strong> Limpieza y aplicación de anestesia tópica si es necesario.</li>
+                        <li><strong>Aplicación del Tratamiento:</strong> Según el protocolo establecido para cada caso.</li>
+                        <li><strong>Tiempo de Procedimiento:</strong> Varía de 30 a 90 minutos según la extensión.</li>
+                        <li><strong>Cuidados Inmediatos:</strong> Aplicación de productos calmantes y protectores.</li>
+                        <li><strong>Seguimiento:</strong> Evaluación de la evolución entre sesiones.</li>
+                    </ul>
+
+                    <h3>¿Quiénes son Candidatos Ideales?</h3>
+                    <p>Nuestros tratamientos de atenuación de cicatrices están indicados para:</p>
+
+                    <ul>
+                        <li><strong>Post-Cirugía:</strong> Personas que desean mejorar cicatrices quirúrgicas.</li>
+                        <li><strong>Secuelas de Acné:</strong> Con cicatrices atróficas o hiperpigmentación post-inflamatoria.</li>
+                        <li><strong>Accidentes:</strong> Cicatrices resultantes de traumatismos o heridas.</li>
+                        <li><strong>Quemaduras:</strong> Marcas por quemaduras de diferente grado.</li>
+                        <li><strong>Cicatrices Queloides:</strong> Que han desarrollado crecimiento excesivo.</li>
+                        <li><strong>Prevención:</strong> Tratamiento temprano para optimizar la cicatrización.</li>
+                    </ul>
+
+                    <p>Realizamos una evaluación completa para determinar el protocolo más adecuado según el tipo de cicatriz y características de la piel.</p>
+
+                    <div class="highlight-box">
+                        <h4>Resultados Comprobados</h4>
+                        <p>Nuestros tratamientos han demostrado una mejoría del 50-80% en la apariencia de las cicatrices, con reducción significativa del relieve, mejoría del tono y textura de la piel.</p>
+                    </div>
+
+                    <h3>Protocolo de Tratamiento Personalizado</h3>
+                    <p>Cada sesión de atenuación de cicatrices tiene una duración de 45 a 75 minutos e incluye:</p>
+
+                    <ul>
+                        <li>Evaluación detallada del estado actual de la cicatriz</li>
+                        <li>Fotografías documentales para seguimiento del progreso</li>
+                        <li>Limpieza y preparación del área a tratar</li>
+                        <li>Aplicación de anestesia tópica si el procedimiento lo requiere</li>
+                        <li>Tratamiento principal según el protocolo establecido</li>
+                        <li>Aplicación de productos post-tratamiento</li>
+                        <li>Explicación detallada de cuidados en casa</li>
+                    </ul>
+
+                    <h3>Número de Sesiones Recomendadas</h3>
+                    <p>Para obtener resultados óptimos en atenuación de cicatrices recomendamos:</p>
+
+                    <ul>
+                        <li><strong>Cicatrices Superficiales:</strong> 3-5 sesiones con intervalo de 4-6 semanas</li>
+                        <li><strong>Cicatrices Moderadas:</strong> 5-8 sesiones con intervalo de 4-8 semanas</li>
+                        <li><strong>Cicatrices Profundas/Queloides:</strong> 8-12 sesiones con intervalo de 6-8 semanas</li>
+                        <li><strong>Cicatrices por Acné:</strong> 4-6 sesiones según la extensión y profundidad</li>
+                        <li><strong>Mantenimiento:</strong> Sesiones anuales para optimizar resultados a largo plazo</li>
+                    </ul>
+
+                    <p>Los resultados son progresivos y acumulativos, siendo visibles mejorías desde la primera sesión que se optimizan con cada tratamiento posterior.</p>
+
+                    <h3>Cuidados Post-Tratamiento</h3>
+                    <p>Para optimizar y mantener los resultados del tratamiento, proporcionamos recomendaciones específicas:</p>
+
+                    <ul>
+                        <li>Evitar exposición solar directa durante mínimo 4 semanas</li>
+                        <li>Usar protector solar FPS 50+ diariamente en el área tratada</li>
+                        <li>Aplicar cremas regeneradoras con silicona, centella asiática o cebolla</li>
+                        <li>No rascar, frotar o manipular la zona en proceso de cicatrización</li>
+                        <li>Mantener la piel hidratada con productos específicos</li>
+                        <li>Evitar actividades que generen fricción en el área tratada</li>
+                        <li>Seguir una alimentación rica en vitaminas A, C y E</li>
+                    </ul>
+
+                    <h3>Factores que Influyen en los Resultados</h3>
+                    <p>Varios factores afectan la efectividad del tratamiento de atenuación:</p>
+
+                    <ul>
+                        <li><strong>Antigüedad de la Cicatriz:</strong> Las más recientes responden mejor al tratamiento.</li>
+                        <li><strong>Localización:</strong> Zonas con buena vascularización mejoran más rápido.</li>
+                        <li><strong>Tipo de Piel:</strong> Fototipos más claros generalmente tienen mejor respuesta.</li>
+                        <li><strong>Edad del Paciente:</strong> La piel joven tiene mayor capacidad regenerativa.</li>
+                        <li><strong>Hábitos:</strong> Tabaquismo y mala alimentación pueden retardar los resultados.</li>
+                        <li><strong>Cumplimiento:</strong> Seguir las recomendaciones post-tratamiento es crucial.</li>
+                    </ul>
+
+                    <h3>Prevención de Cicatrices Problemáticas</h3>
+                    <p>Además del tratamiento, proporcionamos recomendaciones para prevenir cicatrices problemáticas:</p>
+
+                    <ul>
+                        <li>Iniciar tratamiento temprano en heridas recientes</li>
+                        <li>Usar parches de silicona en cicatrices quirúrgicas recientes</li>
+                        <li>Mantener la herida limpia y protegida durante la cicatrización</li>
+                        <li>Evitar la exposición solar en heridas en proceso de cicatrización</li>
+                        <li>Usar productos específicos desde el inicio del proceso de curación</li>
+                        <li>Consultar ante signos de cicatrización anormal (picor, crecimiento)</li>
+                        <li>Mantener una hidratación adecuada de la piel</li>
+                    </ul>
+
+                    <h3>¿Por Qué Elegir Estética Lisamar?</h3>
+                    <p>Somos especialistas reconocidos en atenuación de cicatrices en Mosquera, con amplia experiencia en el tratamiento de diferentes tipos de marcas cutáneas. Nuestro enfoque personalizado combina diferentes tecnologías según las características específicas de cada cicatriz.</p>
+
+                    <p>Contamos con equipos de última generación y seguimos protocolos médicos especializados que nos permiten lograr mejoras significativas en la apariencia de las cicatrices, ayudándote a recuperar la confianza en tu piel con resultados naturales y progresivos.</p>
+                </div>
+
+                <div class="sidebar">
+                    <h3>Agenda tu Consulta</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span style="font-size: 20px; color: var(--gold);">📱</span>
+                            <a href="tel:+573135197957">+57 313 519 7957</a>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <span style="font-size: 20px; color: var(--gold);">📍</span>
+                            <span>Mosquera, Cundinamarca</span>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <span style="font-size: 20px; color: var(--gold);">🕒</span>
+                            <span>Lun - Sáb: 8:00 AM - 6:00 PM</span>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <img src="instagram.jpg" alt="Instagram"
+                                style="width: 22px; height: 22px; margin-right: 8px;">
+                            <a href="https://www.instagram.com/estetica_lisamar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                            target="_blank">
+                            @estetica_lisamar
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/573135197957" class="btn btn-primary" style="width: 100%; text-align: center; display: block;">Contactar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Areas de Servicio -->
+    <section class="areas-section">
+        <div class="areas-container">
+            <h2 class="section-title">Áreas de Servicio</h2>
+            <p style="text-align: center; margin-bottom: 3rem; color: var(--text-gray); font-size: 1.1rem;">
+                Ofrecemos atenuación de cicatrices en Mosquera y municipios cercanos
+            </p>
+            
+            <div class="areas-list">
+                
+                <div class="area-item">
+                    <h4>Madrid</h4>
+                    <p>Veredas Boyero y La Estancia entre el Río Subachoque, cerro Tibayatá y humedal Laguna de la Herrera y su conurbación con el sector de Casablanca</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Funza</h4>
+                    <p>Conurbación San Andrés y La Ramada del Hato. Atenuación de cicatrices profesional cerca de ti.</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Bojacá</h4>
+                    <p>Atendemos en todo el municipio de Bojacá con nuestros tratamientos especializados en atenuación de cicatrices.</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Bogotá - Kennedy</h4>
+                    <p>Localidades de Kennedy y Fontibón (desde el Aeropuerto El Dorado hasta la UPZ Las Margaritas Calle 49 Sur)</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Soacha</h4>
+                    <p>Corregimiento 2, vereda Canoas y Corregimiento 2, vereda Bosatama. Atenuación de cicatrices de alta calidad.</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Bogotá - Bosa</h4>
+                    <p>Localidad de Bosa (desde la UPZ El Porvenir - Calle 49 Sur- y Tintal Sur hasta desembocadura del Río Tunjuelo)</p>
+                </div>
+
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="color: var(--text-gray); margin-bottom: 2rem;">
+                    ¿No encuentras tu zona? ¡Contáctanos! Evaluamos la posibilidad de extender nuestros servicios.
+                </p>
+                <a href="https://wa.me/573135197957" class="btn btn-primary">Consultar Cobertura</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/573135197957" class="whatsapp-float">
+        <img src="whatsapp.png" alt="WhatsApp" 
+            style="width: 22px; height: 22px; margin-right: 8px;">
+        <span>WhatsApp</span>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Estética Lisamar - Body Beautiful. Todos los derechos reservados.</p>
+            <p>Atenuación de cicatrices en Mosquera - Mejora la apariencia de tus marcas cutáneas</p>
+        </div>
+    </footer>
+</body>
+</html>

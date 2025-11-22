@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esteticista en Mosquera | Tratamientos Corporales - Estética Lisamar</title>
+    <meta name="description" content="Esteticista en Mosquera especialista en moldeo corporal, drenaje linfático, post-operatorios y reducción de medidas. Tratamientos estéticos corporales profesionales en Estética Lisamar.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #D4AF37;
+            --dark-gold: #B8941F;
+            --light-gold: #F4E4A6;
+            --white: #FFFFFF;
+            --off-white: #FEFEFE;
+            --light-gray: #F8F8F8;
+            --dark-gray: #333333;
+            --text-gray: #666666;
+            --brown: #4A3428;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+        }
+
+        .header {
+            background: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 60px;
+            width: auto;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--gold);
+            border: 2px solid var(--gold);
+        }
+
+        .btn-secondary:hover {
+            background: var(--light-gold);
+            transform: translateY(-2px);
+        }
+
+        .breadcrumb {
+            background: var(--light-gray);
+            padding: 1rem 0;
+        }
+
+        .breadcrumb-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .breadcrumb a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--off-white) 0%, var(--light-gray) 100%);
+            padding: 4rem 0;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: var(--brown);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-content .subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .hero-image {
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .services-section {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            text-align: center;
+            color: var(--brown);
+            margin-bottom: 4rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            text-align: left;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            border-color: var(--gold);
+        }
+
+        .service-card h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card p {
+            color: var(--text-gray);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card .btn {
+            font-size: 13px;
+            padding: 10px 18px;
+        }
+
+        .areas-section {
+            background: linear-gradient(135deg, var(--light-gray), var(--off-white));
+            padding: 6rem 0;
+        }
+
+        .areas-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .area-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 2px solid transparent;
+        }
+
+        .area-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            border-color: var(--gold);
+        }
+
+        .area-image {
+            width: 100%;
+            height: 150px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+        }
+
+        .area-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--brown);
+            margin-bottom: 1rem;
+        }
+
+        .area-card p {
+            color: var(--text-gray);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            border-radius: 50px;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        .footer {
+            background: var(--brown);
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer p {
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .areas-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-buttons {
+                gap: 0.5rem;
+            }
+
+            .btn {
+                padding: 10px 16px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .service-card {
+                padding: 1.5rem;
+            }
+
+            .area-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/"><img src="logo_limpio.png" alt="Estética Lisamar" class="logo"></a>
+            <div class="nav-buttons">
+                <a href="tel:+573135197957" class="btn btn-secondary">Contacto</a>
+                <a href="../catalogo.html" class="btn btn-primary">Catálogo</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="/">Inicio</a> / <span>Esteticista en Mosquera</span>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Esteticista en Mosquera</h1>
+                <div class="subtitle">Tratamientos Corporales Especializados</div>
+                <p>Somos esteticista especializada en Mosquera con más de 5 años de experiencia en tratamientos corporales. Ofrecemos moldeo corporal, drenaje linfático, post-operatorios, reducción de medidas y eliminación de fibrosis. Utilizamos tecnología de vanguardia y técnicas profesionales para transformar tu cuerpo de manera segura y efectiva.</p>
+
+                <div class="hero-buttons">
+                    <a href="https://wa.me/573135197957" class="btn btn-primary">Agendar Cita</a>
+                    <a href="../catalogo.html" class="btn btn-secondary">Ver Todos los Servicios</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Espacio para imagen principal de esteticista -->
+                <img src="esteticista1.jpg" alt="Esteticista en Mosquera - Tratamientos corporales profesionales">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="services-container">
+            <h2 class="section-title">Nuestros Tratamientos</h2>
+            <div class="services-grid">
+                
+                <div class="service-card">
+                    <h2>Post-operatorios en Mosquera</h2>
+                    <p>Tratamientos especializados post-operatorios para acelerar tu recuperación después de cirugías estéticas. Reducimos inflamación, mejoramos la cicatrización y optimizamos los resultados finales.</p>
+                    <a href="/post-operatorios-mosquera.html" class="btn btn-primary">Conocer Más</a>
+                </div>
+
+                <div class="service-card">
+                    <h2>Moldeo Corporal en Mosquera</h2>
+                    <p>Técnicas avanzadas de moldeo corporal para esculpir y definir tu silueta. Combinamos tecnología de última generación con métodos manuales profesionales.</p>
+                    <a href="/moldeo-corporal-mosquera.html" class="btn btn-primary">Conocer Más</a>
+                </div>
+
+                <div class="service-card">
+                    <h2>Moldeo Tonificación y Levantamiento de Glúteos en Mosquera</h2>
+                    <p>Especialistas en tonificación y levantamiento de glúteos sin cirugía. Resultados visibles desde las primeras sesiones con técnicas no invasivas.</p>
+                    <a href="/moldeo-tonificacion-levantamiento-gluteos-mosquera.html" class="btn btn-primary">Conocer Más</a>
+                </div>
+
+                <div class="service-card">
+                    <h2>Reestructuración Glútea en Mosquera</h2>
+                    <p>Tratamiento integral para reestructurar y mejorar la forma y volumen de los glúteos mediante técnicas especializadas y equipos de alta tecnología.</p>
+                    <a href="/reestructuracion-glutea-mosquera.html" class="btn btn-primary">Conocer Más</a>
+                </div>
+
+                <div class="service-card">
+                    <h2>Eliminación de Fibrosis Post Quirúrgica en Mosquera</h2>
+                    <p>Tratamiento especializado para eliminar fibrosis después de cirugías. Restauramos la suavidad y elasticidad natural de tu piel.</p>
+                    <a href="/eliminacion-fibrosis-post-quirurgica-mosquera.html" class="btn btn-primary">Conocer Más</a>
+                </div>
+
+                <div class="service-card">
+                    <h2>Reducción de Medidas en Mosquera</h2>
+                    <p>Programa integral de reducción de medidas corporales. Combinamos múltiples técnicas para lograr resultados efectivos y duraderos.</p>
+                    <a href="/reduccion-medidas-mosquera.html" class="btn btn-primary">Conocer Más</a>
+                </div>
+
+                <div class="service-card">
+                    <h2>Levantamiento y Tonificación de Glúteos en Mosquera</h2>
+                    <p>Tratamiento especializado para levantar y tonificar los glúteos, mejorando su forma y firmeza de manera natural y efectiva.</p>
+                    <a href="/levantamiento-tonificacion-gluteos-mosquera.html" class="btn btn-primary">Conocer Más</a>
+                </div>
+
+                <div class="service-card">
+                    <h2>Despigmentación de Zonas Íntimas en Mosquera</h2>
+                    <p>Tratamiento delicado y profesional para despigmentar zonas íntimas, devolviendo el tono natural de la piel con total privacidad y cuidado.</p>
+                    <a href="/despigmentacion-zonas-intimas-mosquera.html" class="btn btn-primary">Conocer Más</a>
+                </div>
+
+                <div class="service-card">
+                    <h2>Drenaje Linfático Manual en Mosquera</h2>
+                    <p>Técnica especializada de drenaje linfático manual para eliminar toxinas, reducir retención de líquidos y mejorar la circulación.</p>
+                    <a href="/drenaje-linfatico-manual-mosquera.html" class="btn btn-primary">Conocer Más</a>
+                </div>
+
+                <div class="service-card">
+                    <h2>Camuflaje y Eliminación de Estrías en Mosquera</h2>
+                    <p>Tratamientos avanzados para camuflar y eliminar estrías, mejorando significativamente la apariencia y textura de la piel.</p>
+                    <a href="/camuflaje-eliminacion-estrias-mosquera.html" class="btn btn-primary">Conocer Más</a>
+                </div>
+
+                <div class="service-card">
+                    <h2>Atenuación de Cicatrices en Mosquera</h2>
+                    <p>Tratamiento especializado para atenuar cicatrices y mejorar la textura de la piel con técnicas profesionales y equipos avanzados.</p>
+                    <a href="/atenuacion-cicatrices-mosquera.html" class="btn btn-primary">Conocer Más</a>
+                </div>
+
+                <div class="service-card">
+                    <h2>Maderoterapia en Mosquera</h2>
+                    <p>Terapia natural con elementos de madera para moldear el cuerpo, reducir celulitis y mejorar la circulación de manera relajante y efectiva.</p>
+                    <a href="/maderoterapia-mosquera.html" class="btn btn-primary">Conocer Más</a>
+                </div>
+
+                <div class="service-card">
+                    <h2>Cavitación en Mosquera</h2>
+                    <p>Tratamiento no invasivo de cavitación para eliminar grasa localizada y reducir medidas corporales con tecnología ultrasónica avanzada.</p>
+                    <a href="/cavitacion-mosquera.html" class="btn btn-primary">Conocer Más</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Areas de Servicio -->
+    <section class="areas-section">
+        <div class="areas-container">
+            <h2 class="section-title">Áreas de Servicio</h2>
+            <p style="text-align: center; margin-bottom: 3rem; color: var(--text-gray); font-size: 1.1rem;">
+                Ofrecemos nuestros servicios de esteticista en Mosquera y municipios cercanos
+            </p>
+            
+            <div class="areas-grid">
+                
+                <div class="area-card">
+                    <h3>Madrid</h3>
+                    <p>Veredas Boyero y La Estancia entre el Río Subachoque, cerro Tibayatá y humedal Laguna de la Herrera y su conurbación con el sector de Casablanca</p>
+                </div>
+
+                <div class="area-card">
+                    <h3>Funza</h3>
+                    <p>Conurbación San Andrés y La Ramada del Hato. Servicios de esteticista profesional cerca de ti.</p>
+                </div>
+
+                <div class="area-card">
+                    <h3>Bojacá</h3>
+                    <p>Atendemos en todo el municipio de Bojacá con nuestros tratamientos corporales especializados.</p>
+                </div>
+
+                <div class="area-card">
+                    <h3>Bogotá - Kennedy</h3>
+                    <p>Localidades de Kennedy y Fontibón (desde el Aeropuerto El Dorado hasta la UPZ Las Margaritas Calle 49 Sur)</p>
+                </div>
+
+                <div class="area-card">
+                    <h3>Soacha</h3>
+                    <p>Corregimiento 2, vereda Canoas y Corregimiento 2, vereda Bosatama. Tratamientos estéticos corporales.</p>
+                </div>
+
+                <div class="area-card">
+                    <h3>Bogotá - Bosa</h3>
+                    <p>Localidad de Bosa (desde la UPZ El Porvenir - Calle 49 Sur- y Tintal Sur hasta desembocadura del Río Tunjuelo)</p>
+                </div>
+
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="color: var(--text-gray); margin-bottom: 2rem;">
+                    ¿No encuentras tu zona? ¡Contáctanos! Evaluamos la posibilidad de extender nuestros servicios.
+                </p>
+                <a href="https://wa.me/573135197957" class="whatsapp-float">
+                    <img src="whatsapp.png" alt="WhatsApp" 
+                        style="width: 22px; height: 22px; margin-right: 8px;">
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/573135197957" class="whatsapp-float">
+        <img src="whatsapp.png" alt="WhatsApp" 
+            style="width: 22px; height: 22px; margin-right: 8px;">
+        <span>WhatsApp</span>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Estética Lisamar - Body Beautiful. Todos los derechos reservados.</p>
+            <p>Esteticista en Mosquera especialista en tratamientos corporales profesionales</p>
+        </div>
+    </footer>
+</body>
+</html>

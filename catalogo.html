@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Servicios | Estética Lisamar</title>
+  <meta name="description" content="Catálogo de servicios de Estética Lisamar en Mosquera. Tratamientos corporales, faciales, médicos y de bienestar con enfoque de lujo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --gold: #D4AF37;
+      --dark-gold: #B8941F;
+      --light-gold: #F4E4A6;
+      --white: #FFFFFF;
+      --off-white: #FEFEFE;
+      --light-gray: #F8F8F8;
+      --dark-gray: #333333;
+      --text-gray: #666666;
+      --brown: #4A3428;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--dark-gray);
+      background-color: var(--white);
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* HEADER */
+
+    .header {
+      background: var(--white);
+      padding: 0.7rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      height: 60px;
+      width: auto;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 500;
+      font-size: 13px;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+      color: var(--white);
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45);
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      color: var(--gold);
+      border: 2px solid var(--gold);
+    }
+
+    .btn-secondary:hover {
+      background: var(--light-gold);
+      transform: translateY(-1px);
+    }
+
+    /* HERO */
+
+    .hero {
+      background: linear-gradient(135deg, #fdf9f3 0%, #f2e7d9 100%);
+      padding: 3rem 0 2rem;
+    }
+
+    .hero-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-content h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.7rem;
+      font-weight: 600;
+      color: var(--brown);
+      margin-bottom: 0.7rem;
+      line-height: 1.2;
+    }
+
+    .hero-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      color: var(--gold);
+      font-style: italic;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-content p {
+      font-size: 0.98rem;
+      color: var(--text-gray);
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-tag {
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(212,175,55,0.5);
+      font-size: 0.78rem;
+      background: rgba(255,255,255,0.85);
+      color: var(--brown);
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-image {
+      position: relative;
+    }
+
+    /* Imagen grande hero */
+    .hero-main-image {
+      width: 100%;
+      max-width: 520px;
+      height: 0;
+      padding-bottom: 130%;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+      background: #000;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+    }
+
+    .hero-main-image img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-logo-overlay {
+      position: absolute;
+      left: 50%;
+      bottom: -22px;
+      transform: translateX(-50%);
+      background: rgba(255,255,255,0.96);
+      border-radius: 999px;
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .hero-logo-overlay img {
+      height: 36px;
+      width: auto;
+    }
+
+    .hero-logo-overlay span {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      color: var(--brown);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* NAV DE CATEGORÍAS */
+
+    .catalog-nav-wrapper {
+      max-width: 1200px;
+      margin: 2.4rem auto 1.5rem;
+      padding: 0 1.5rem;
+    }
+
+    .catalog-nav-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      color: var(--brown);
+      margin-bottom: 0.75rem;
+    }
+
+    .catalog-nav {
+      display: flex;
+      gap: 0.75rem;
+      overflow-x: auto;
+      padding-bottom: 0.4rem;
+      scrollbar-width: thin;
+    }
+
+    .catalog-nav::-webkit-scrollbar {
+      height: 4px;
+    }
+    .catalog-nav::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .catalog-nav::-webkit-scrollbar-thumb {
+      background: rgba(0,0,0,0.1);
+      border-radius: 999px;
+    }
+
+    .nav-chip {
+      flex-shrink: 0;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(212,175,55,0.5);
+      background: var(--white);
+      font-size: 0.85rem;
+      color: var(--brown);
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .nav-chip.active {
+      background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+      color: var(--white);
+      border-color: transparent;
+      box-shadow: 0 6px 18px rgba(212,175,55,0.4);
+    }
+
+    .nav-chip:hover {
+      transform: translateY(-1px);
+    }
+
+    /* SECCIONES DEL CATÁLOGO */
+
+    .catalog-section {
+      padding: 2.5rem 0;
+      background: var(--white);
+    }
+
+    .catalog-section:nth-of-type(even) {
+      background: var(--light-gray);
+    }
+
+    .catalog-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: minmax(0,1.1fr) minmax(0,1fr);
+      gap: 2.2rem;
+      align-items: center;
+    }
+
+    .section-image-wrapper {
+      width: 100%;
+      height: 0;
+      padding-bottom: 110%;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+      background: #000;
+      position: relative;
+    }
+
+    .section-image-wrapper img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .section-content h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.1rem;
+      color: var(--brown);
+      margin-bottom: 0.4rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--gold);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.9rem;
+    }
+
+    .section-description {
+      font-size: 0.9rem;
+      color: var(--text-gray);
+      margin-bottom: 1.2rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 0.6rem 0.8rem;
+    }
+
+    .service-pill {
+      font-size: 0.86rem;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(212,175,55,0.4);
+      background: rgba(255,255,255,0.9);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .service-pill-bullet {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .service-pill:hover {
+      background: var(--light-gold);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(212,175,55,0.25);
+    }
+
+    .service-pill.selected {
+      background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+      color: var(--white);
+      border-color: transparent;
+      box-shadow: 0 6px 18px rgba(212,175,55,0.45);
+    }
+
+    /* SECCIÓN CONTACTO / MAPA */
+
+    .contact-section {
+      background: linear-gradient(135deg, var(--light-gray), var(--off-white));
+      padding: 3rem 0 4.5rem;
+    }
+
+    .contact-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .contact-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      color: var(--brown);
+      margin-bottom: 1.8rem;
+      text-align: center;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0,1fr) minmax(0,1.3fr);
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .contact-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 1.6rem 1.4rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1.2rem;
+      font-size: 0.95rem;
+    }
+
+    .contact-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: rgba(212,175,55,0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .contact-item a {
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    .map-container {
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 360px;
+      border: none;
+    }
+
+    /* FOOTER */
+
+    .footer {
+      background: var(--brown);
+      color: var(--white);
+      text-align: center;
+      padding: 2.6rem 1.5rem 3.5rem;
+      font-size: 0.9rem;
+    }
+
+    .footer p {
+      margin-bottom: 0.4rem;
+      opacity: 0.9;
+    }
+
+    /* BARRA SERVICIO SELECCIONADO + WHATSAPP */
+
+    .selected-bar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255,252,241,0.97);
+      border-top: 1px solid rgba(0,0,0,0.07);
+      padding: 7px 14px;
+      font-size: 0.82rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      z-index: 900;
+    }
+
+    .selected-bar span.label {
+      font-weight: 600;
+      color: var(--brown);
+    }
+
+    .selected-bar span.value {
+      color: var(--dark-gray);
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 52px;
+      right: 18px;
+      background: #25D366;
+      color: white;
+      border-radius: 50px;
+      padding: 11px 16px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.45);
+      z-index: 950;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+    }
+
+    .whatsapp-float img {
+      width: 22px;
+      height: 22px;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(37, 211, 102, 0.55);
+    }
+
+    /* ANIMACIONES DE ENTRADA */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-main-image {
+        padding-bottom: 120%;
+      }
+
+      .hero-logo-overlay {
+        bottom: -18px;
+      }
+
+      .hero-content h1 {
+        font-size: 2.3rem;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .catalog-container {
+        grid-template-columns: 1fr;
+      }
+
+      .section-content {
+        text-align: center;
+      }
+
+      .section-description {
+        max-width: 520px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.2rem;
+      }
+
+      .nav-container {
+        padding: 0 0.9rem;
+      }
+
+      .catalog-nav-wrapper {
+        padding: 0 1rem;
+      }
+
+      .catalog-container {
+        padding: 0 1rem;
+      }
+
+      .contact-container {
+        padding: 0 1rem;
+      }
+
+      .nav-buttons {
+        gap: 0.4rem;
+      }
+
+      .btn {
+        padding: 8px 13px;
+        font-size: 12px;
+      }
+
+      .selected-bar {
+        font-size: 0.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <nav class="nav-container">
+      <!-- Logo usando la misma ruta del index -->
+      <img src="logo_limpio.png" alt="Estética Lisamar" class="logo">
+      <div class="nav-buttons">
+        <a href="index.html" class="btn btn-secondary">← Inicio</a>
+        <a href="https://wa.me/573135197957" class="btn btn-primary">Agendar por WhatsApp</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-content reveal">
+        <h1>Catálogo de servicios en Mosquera</h1>
+        <div class="hero-subtitle">Estética Lisamar · Body Beautiful</div>
+        <p>
+          Descubre todos los tratamientos corporales, faciales, médicos y de bienestar que ofrece
+          Estética Lisamar en Mosquera, diseñados como experiencias de spa de lujo.
+        </p>
+        <div class="hero-tags">
+          <span class="hero-tag">Moldeo corporal</span>
+          <span class="hero-tag">Limpiezas faciales de lujo</span>
+          <span class="hero-tag">Spa médico</span>
+          <span class="hero-tag">Masajes &amp; bienestar</span>
+        </div>
+        <div class="hero-buttons">
+          <a href="https://wa.me/573135197957" class="btn btn-primary">Quiero agendar</a>
+          <a href="#corporal" class="btn btn-secondary">Ver tratamientos</a>
+        </div>
+      </div>
+      <div class="hero-image reveal">
+        <!-- Imagen principal usando la misma ruta del index -->
+        <div class="hero-main-image">
+          <img src="profesional.jpg" alt="Spa de lujo en Mosquera - Estética Lisamar">
+        </div>
+        <div class="hero-logo-overlay">
+          <!-- Logo usando la misma ruta -->
+          <img src="logo_limpio.png" alt="Logotipo Estética Lisamar">
+          <span>Luxury Beauty Spa</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NAV DE CATEGORÍAS -->
+  <section class="catalog-nav-wrapper">
+    <h2 class="catalog-nav-title">Explora nuestros tratamientos</h2>
+    <div class="catalog-nav">
+      <button class="nav-chip active" data-target="corporal">Estética Corporal &amp; Post-operatorios</button>
+      <button class="nav-chip" data-target="facial">Spa Facial</button>
+      <button class="nav-chip" data-target="medico">Spa Médico</button>
+      <button class="nav-chip" data-target="bienestar">Spa &amp; Centro de Bienestar</button>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: CORPORAL -->
+  <section id="corporal" class="catalog-section">
+    <div class="catalog-container reveal">
+      <div class="section-image-wrapper">
+        <!-- Usando la misma ruta del index para esteticista -->
+        <img src="esteticista.jpg" alt="Tratamientos corporales en Mosquera - Estética Lisamar">
+      </div>
+      <div class="section-content">
+        <div class="section-subtitle">Moldeo · Glúteos · Fibrosis</div>
+        <h2>Estética Corporal &amp; Post-operatorios</h2>
+        <p class="section-description">
+          Tratamientos corporales avanzados para moldear, tonificar, acompañar post-operatorios
+          y mejorar la textura de la piel.
+        </p>
+        <div class="services-grid">
+          <button class="service-pill">
+            <span class="service-pill-bullet"></span>
+            <span>Post-operatorios en Mosquera</span>
+          </button>
+          <button class="service-pill">
+            <span class="service-pill-bullet"></span>
+            <span>Moldeo corporal</span>
+          </button>
+          <button class="service-pill">
+            <span class="service-pill-bullet"></span>
+            <span>Moldeo, tonificación y levantamiento de glúteos</span>
+          </button>
+          <button class="service-pill">
+            <span class="service-pill-bullet"></span>
+            <span>Reestructuración glútea</span>
+          </button>
+          <button class="service-pill">
+            <span class="service-pill-bullet"></span>
+            <span>Eliminación de fibrosis post-quirúrgica</span>
+          </button>
+          <button class="service-pill">
+            <span class="service-pill-bullet"></span>
+            <span>Reducción de medidas</span>
+          </button>
+          <button class="service-pill">
+            <span class="service-pill-bullet"></span>
+            <span>Levantamiento y tonificación de glúteos</span>
+          </button>
+          <button class="service-pill">
+            <span class="service-pill-bullet"></span>
+            <span>Despigmentación de zonas íntimas</span>
+          </button>
+          <button class="service-pill">
+            <span class="service-pill-bullet"></span>
+            <span>Drenaje linfático manual</span>
+          </button>
+          <button class="service-pill">
+            <span class="service-pill-bullet"></span>
+            <span>Camuflaje y eliminación de estrías</span>
+          </button>
+          <button class="service-pill">
+            <span class="service-pill-bullet"></span>
+            <span>Atenuación de cicatrices</span>
+          </button>
+          <button class="service-pill">
+            <span class="service-pill-bullet"></span>
+            <span>Maderoterapia</span>
+          </button>
+          <button class="service-pill">
+            <span class="service-pill-bullet"></span>
+            <span>Cavitación</span>
+          </button>
+          <button class="service-pill">
+            <span class="service-pill-bullet"></span>
+            <span>Radiofrecuencia corporal</span>
+          </button>
+          <button class="service-pill">
+            <span class="service-pill-bullet"></span>
+            <span>Vacumterapia</span>
+          </button>
+          <button class="service-pill">
+            <span class="service-pill-bullet"></span>
+            <span>Electroestimulación</span>
+          </button>
+          <button class="service-pill">
+            <span class="service-pill-bullet"></span>
+            <span>Hidrolipoclasia para grandes adiposidades</span>
+          </button>
+          <button class="service-pill">
+            <span class="service-pill-bullet"></span>
+            <span>Intralipoterapia de espalda</span>
+          </button>
+          <button class="service-pill">
+            <span class="service-pill-bullet"></span>
+            <span>Limpieza de espalda y escote (foliculitis)</span>
+          </button>
+          <button class="service-pill">
+            <span class="service-pill-bullet"></span>
+            <span>Eliminación de fibrosis corporal</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: FACIAL -->
+  <section id="facial" class="catalog-section">
+    <div class="catalog-container reveal">
+      <div class="section-image-wrapper">
+        <!-- Usando la misma ruta del index para spa facial -->
+        <img src="spa_facial.jpg" alt="Spa facial en Mosquera - Estética Lisamar">
+      </div>
+      <div class="section-content">
+        <div class="section-subtitle">Limpiezas · Rejuvenecimiento · Glow</div>
+        <h2>Spa Facial</h2>
+        <p class="section-description">
+          Protocolos faciales premium para limpieza, hidratación y rejuvenecimiento.
+        </p>
+        <div class="services-grid">
+          <button class="service-pill"><span class="service-pill-bullet"></span><span>Limpieza facial profunda</span></button>
+          <button class="service-pill"><span class="service-pill-bullet"></span><span>Hidratación de labios</span></button>
+          <button class="service-pill"><span class="service-pill-bullet"></span><span>Hidratación facial intensiva</span></button>
+          <button class="service-pill"><span class="service-pill-bullet"></span><span>Eliminación / tratamiento de ojeras</span></button>
+          <button class="service-pill"><span class="service-pill-bullet"></span><span>Rejuvenecimiento facial</span></button>
+          <button class="service-pill"><span class="service-pill-bullet"></span><span>Peeling químico</span></button>
+          <button class="service-pill"><span class="service-pill-bullet"></span><span>Microdermoabrasión con puntas de diamante</span></button>
+          <button class="service-pill"><span class="service-pill-bullet"></span><span>Lifting facial sin cirugía</span></button>
+          <button class="service-pill"><span class="service-pill-bullet"></span><span>Radiofrecuencia facial</span></button>
+          <button class="service-pill"><span class="service-pill-bullet"></span><span>Tratamiento antiacné</span></button>
+          <button class="service-pill"><span class="service-pill-bullet"></span><span>Mascarillas nutritivas</span></button>
+          <button class="service-pill"><span class="service-pill-bullet"></span><span>Lipopapada enzimática sin cirugía</span></button>
+          <button class="service-pill"><span class="service-pill-bullet"></span><span>Eliminación de líneas de expresión</span></button>
+          <button class="service-pill"><span class="service-pill-bullet"></span><span>BB Glow</span></button>
+          <button class="service-pill"><span class="service-pill-bullet"></span><span>Mantenimiento de botox</span></button>
+          <button class="service-pill"><span class="service-pill-bullet"></span><span>Lifting de cejas y pestañas</span></button>
+          <button class="service-pill"><span class="service-pill-bullet"></span><span>Micropigmentación de cejas y labios</span></button>
+          <button class="service-pill"><span class="service-pill-bullet"></span><span>BB Lips</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: MÉDICO -->
+  <section id="medico" class="catalog-section">
+    <div class="catalog-container reveal">
+      <div class="section-image-wrapper">
+        <!-- Usando la misma ruta del index para spa médico -->
+        <img src="spa_medico.jpg" alt="Spa médico en Mosquera - Estética Lisamar">
+      </div>
+      <div class="section-content">
+        <div class="section-subtitle">Médico · Regenerativo · Wellness</div>
+        <h2>Spa Médico</h2>
+        <p class="section-description">
+          Procedimientos médico-estéticos de apoyo para potenciar la regeneración y el bienestar.
+        </p>
+        <div class="services-grid">
+          <button class="service-pill"><span class="service-pill-bullet"></span><span>PRP – Plasma rico en plaquetas</span></button>
+          <button class="service-pill"><span class="service-pill-bullet"></span><span>Suero-terapia de bienestar</span></button>
+          <button class="service-pill"><span class="service-pill-bullet"></span><span>Rejuvenecimiento de cuello y escote</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: BIENESTAR -->
+  <section id="bienestar" class="catalog-section">
+    <div class="catalog-container reveal">
+      <div class="section-image-wrapper">
+        <!-- Usando la misma ruta del index para spa bienestar -->
+        <img src="spa_bienestar.jpg" alt="Spa y centro de bienestar en Mosquera - Estética Lisamar">
+      </div>
+      <div class="section-content">
+        <div class="section-subtitle">Masajes · Manos · Cabello</div>
+        <h2>Spa &amp; Centro de Bienestar</h2>
+        <p class="section-description">
+          Experiencias de relajación y cuidado para cuerpo, manos y cabello.
+        </p>
+        <div class="services-grid">
+          <button class="service-pill"><span class="service-pill-bullet"></span><span>Masaje relajante &amp; descontracturante</span></button>
+          <button class="service-pill"><span class="service-pill-bullet"></span><span>Rejuvenecimiento y nutrición de manos</span></button>
+          <button class="service-pill"><span class="service-pill-bullet"></span><span>Esencia Renacer Capilar</span></button>
+          <button class="service-pill"><span class="service-pill-bullet"></span><span>Hidratación capilar</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO + MAPA -->
+  <section class="contact-section">
+    <div class="contact-container">
+      <h2 class="contact-title">Contacta con Estética Lisamar en Mosquera</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <span>Mosquera, Cundinamarca · Sede RUBY FIT SPORTS</span>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📱</div>
+            <a href="tel:+573135197957">+57 313 519 7957</a>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <img src="whatsapp.png" alt="WhatsApp" style="width:18px;height:18px;">
+            </div>
+            <a href="https://wa.me/573135197957" target="_blank">WhatsApp Estética Lisamar</a>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <img src="instagram.jpg" alt="Instagram" style="width:18px;height:18px;border-radius:4px;">
+            </div>
+            <a href="https://www.instagram.com/estetica_lisamar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+              @estetica_lisamar
+            </a>
+          </div>
+        </div>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.360547296213!2d-74.228263!3d4.7072777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f797b0f5f9e65%3A0x601cedc08694a5e4!2sRUBY%20FIT%20SPORTS!5e0!3m2!1ses-419!2sco!4v1763842193886!5m2!1ses-419!2sco"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2025 Estética Lisamar - Body Beautiful. Todos los derechos reservados.</p>
+    <p>Spa en Mosquera especialista en tratamientos de belleza y bienestar de lujo.</p>
+  </footer>
+
+  <!-- BARRA SERVICIO + WHATSAPP -->
+  <div class="selected-bar">
+    <span class="label">Servicio seleccionado:</span>
+    <span class="value" id="selectedServiceText">toca un tratamiento para verlo aquí.</span>
+  </div>
+
+  <a href="https://wa.me/573135197957" class="whatsapp-float" target="_blank">
+    <img src="whatsapp.png" alt="WhatsApp">
+    <span>WhatsApp</span>
+  </a>
+
+  <script>
+    // Scroll suave para chips de categorías
+    document.querySelectorAll('.nav-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        const targetId = chip.getAttribute('data-target');
+        const section = document.getElementById(targetId);
+        if (section) {
+          window.scrollTo({
+            top: section.offsetTop - 90,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Resaltar chip activo según sección visible
+    const sections = ['corporal','facial','medico','bienestar'].map(id => document.getElementById(id));
+    const chips = document.querySelectorAll('.nav-chip');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          chips.forEach(chip => {
+            chip.classList.toggle('active', chip.getAttribute('data-target') === id);
+          });
+        }
+      });
+    }, { threshold: 0.4 });
+
+    sections.forEach(sec => { if (sec) observer.observe(sec); });
+
+    // Barra de servicio seleccionado
+    const servicePills = document.querySelectorAll('.service-pill');
+    const selectedText = document.getElementById('selectedServiceText');
+
+    servicePills.forEach(pill => {
+      pill.addEventListener('click', (e) => {
+        e.stopPropagation();
+        servicePills.forEach(p => p.classList.remove('selected'));
+        pill.classList.add('selected');
+        const name = pill.querySelector('span:nth-child(2)').textContent.trim();
+        selectedText.textContent = name;
+      });
+    });
+
+    // Animaciones reveal al hacer scroll
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+</html>

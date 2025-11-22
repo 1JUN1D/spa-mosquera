@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reestructuración Glútea en Mosquera | Tratamientos Corporales - Estética Lisamar</title>
+    <meta name="description" content="Reestructuración glútea en Mosquera para mejorar forma y volumen. Tratamiento integral con técnicas especializadas y equipos de alta tecnología. Estética Lisamar - Body Beautiful.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #D4AF37;
+            --dark-gold: #B8941F;
+            --light-gold: #F4E4A6;
+            --white: #FFFFFF;
+            --off-white: #FEFEFE;
+            --light-gray: #F8F8F8;
+            --dark-gray: #333333;
+            --text-gray: #666666;
+            --brown: #4A3428;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+        }
+
+        .header {
+            background: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 60px;
+            width: auto;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--gold);
+            border: 2px solid var(--gold);
+        }
+
+        .btn-secondary:hover {
+            background: var(--light-gold);
+            transform: translateY(-2px);
+        }
+
+        .breadcrumb {
+            background: var(--light-gray);
+            padding: 1rem 0;
+        }
+
+        .breadcrumb-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .breadcrumb a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--off-white) 0%, var(--light-gray) 100%);
+            padding: 4rem 0;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: var(--brown);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-content .subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .hero-image {
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .content-section {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .main-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: var(--brown);
+            margin-bottom: 2rem;
+        }
+
+        .main-content h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            margin: 2.5rem 0 1.5rem 0;
+        }
+
+        .main-content p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .main-content ul {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .main-content li {
+            color: var(--text-gray);
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
+        }
+
+        .sidebar {
+            background: var(--light-gray);
+            padding: 3rem;
+            border-radius: 15px;
+            height: fit-content;
+            position: sticky;
+            top: 120px;
+        }
+
+        .sidebar h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--brown);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .contact-info {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .contact-item a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .areas-section {
+            background: linear-gradient(135deg, var(--light-gray), var(--off-white));
+            padding: 6rem 0;
+        }
+
+        .areas-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            text-align: center;
+            color: var(--brown);
+            margin-bottom: 4rem;
+        }
+
+        .areas-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .area-item {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 2px solid transparent;
+        }
+
+        .area-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            border-color: var(--gold);
+        }
+
+        .area-item h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--brown);
+            margin-bottom: 1rem;
+        }
+
+        .area-item p {
+            color: var(--text-gray);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            border-radius: 50px;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        .footer {
+            background: var(--brown);
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer p {
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-gold), rgba(212, 175, 55, 0.1));
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid var(--gold);
+        }
+
+        .highlight-box h4 {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--brown);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .sidebar {
+                position: relative;
+                top: 0;
+            }
+
+            .areas-list {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-buttons {
+                gap: 0.5rem;
+            }
+
+            .btn {
+                padding: 10px 16px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .main-content h2 {
+                font-size: 2rem;
+            }
+
+            .main-content h3 {
+                font-size: 1.5rem;
+            }
+
+            .sidebar {
+                padding: 2rem;
+            }
+
+            .area-item {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/"><img src="logo_limpio.png" alt="Estética Lisamar" class="logo"></a>
+            <div class="nav-buttons">
+                <a href="tel:+573135197957" class="btn btn-secondary">Contacto</a>
+                <a href="../catalogo.html" class="btn btn-primary">Catálogo</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="/">Inicio</a> / <a href="/esteticista-mosquera.html">Esteticista en Mosquera</a> / <span>Reestructuración Glútea en Mosquera</span>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Reestructuración Glútea en Mosquera</h1>
+                <div class="subtitle">Transforma Completamente tus Glúteos</div>
+                <p>Tratamiento integral de reestructuración glútea en Mosquera para mejorar forma, volumen y proyección de manera completamente natural. Utilizamos técnicas especializadas y equipos de alta tecnología para lograr una transformación completa de la zona glútea.</p>
+                <p>Nuestro programa de reestructuración glútea combina múltiples metodologías avanzadas que permiten remodelar, tonificar y dar volumen a los glúteos, creando una silueta perfectamente proporcionada y atractiva sin necesidad de procedimientos invasivos.</p>
+
+                <div class="hero-buttons">
+                    <a href="https://wa.me/573135197957" class="btn btn-primary">Agendar Consulta</a>
+                    <a href="/esteticista-mosquera.html" class="btn btn-secondary">Ver Más Tratamientos</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Espacio para imagen principal de reestructuración glútea -->
+                <img src="reestructuracion-glutea-mosquera.jpg" alt="Reestructuración glútea en Mosquera - Tratamiento integral especializado">
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="content-container">
+            <div class="content-grid">
+                <div class="main-content">
+                    <h2>¿Qué es la Reestructuración Glútea?</h2>
+                    <p>La reestructuración glútea en Mosquera es un tratamiento estético integral y avanzado que tiene como objetivo transformar completamente la zona glútea, mejorando su forma, volumen, proyección y firmeza mediante técnicas no invasivas de última generación.</p>
+
+                    <p>Este innovador tratamiento va más allá de los procedimientos tradicionales, ya que no solo se enfoca en el aspecto superficial, sino que trabaja en profundidad para reestructurar el tejido muscular, estimular la producción de colágeno y remodelar el contorno glúteo de manera integral y duradera.</p>
+
+                    <div class="highlight-box">
+                        <h4>Objetivos de la Reestructuración Glútea</h4>
+                        <p>Remodelar completamente la forma glútea, aumentar el volumen y proyección natural, mejorar la firmeza y elasticidad, corregir asimetrías, eliminar flacidez y celulitis, y crear una silueta armoniosa y proporcionada.</p>
+                    </div>
+
+                    <h3>Metodología Integral de Reestructuración</h3>
+                    <p>Nuestro programa de reestructuración glútea en Mosquera utiliza un enfoque multimodal que combina las tecnologías más avanzadas del mercado:</p>
+
+                    <ul>
+                        <li><strong>Electroestimulación Muscular Profunda:</strong> Estimula las fibras musculares para aumentar volumen y firmeza de manera natural y progresiva.</li>
+                        <li><strong>Radiofrecuencia Multipolar:</strong> Genera calor controlado que estimula la producción de colágeno y elastina para tensar y reafirmar la piel.</li>
+                        <li><strong>Ondas de Choque Focalizadas:</strong> Mejoran la circulación, estimulan el metabolismo celular y promueven la regeneración de tejidos.</li>
+                        <li><strong>Vacumterapia Especializada:</strong> Mejora la circulación sanguínea y linfática mientras moldea y levanta los tejidos glúteos.</li>
+                        <li><strong>Mesoterapia Virtual:</strong> Introduce principios activos sin agujas para nutrir y regenerar los tejidos desde el interior.</li>
+                        <li><strong>Campos Electromagnéticos:</strong> Estimulan la actividad celular y aceleran los procesos de reparación y regeneración tisular.</li>
+                    </ul>
+
+                    <h3>Fases del Tratamiento de Reestructuración</h3>
+                    <p>El proceso de reestructuración glútea se desarrolla en tres fases específicas diseñadas para maximizar los resultados:</p>
+
+                    <ul>
+                        <li><strong>Fase 1 - Preparación y Activación (Sesiones 1-5):</strong> Preparamos los tejidos, activamos la circulación y comenzamos la estimulación muscular básica.</li>
+                        <li><strong>Fase 2 - Reestructuración Intensiva (Sesiones 6-12):</strong> Aplicamos el protocolo completo de tecnologías para la transformación profunda de los tejidos.</li>
+                        <li><strong>Fase 3 - Consolidación y Perfeccionamiento (Sesiones 13-18):</strong> Consolidamos los resultados obtenidos y refinamos los detalles para el resultado final.</li>
+                    </ul>
+
+                    <h3>¿Quiénes son Candidatas Ideales?</h3>
+                    <p>La reestructuración glútea en Mosquera está diseñada para mujeres que presenten:</p>
+
+                    <ul>
+                        <li>Glúteos pequeños o sin proyección natural</li>
+                        <li>Pérdida significativa de volumen por envejecimiento o cambios hormonales</li>
+                        <li>Flacidez severa después del embarazo o pérdida de peso</li>
+                        <li>Asimetrías glúteas que requieran corrección integral</li>
+                        <li>Celulitis y irregularidades en la textura de la piel</li>
+                        <li>Deseo de una transformación completa sin cirugía</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <h4>Resultados Documentados</h4>
+                        <p>Nuestros protocolos de reestructuración glútea han demostrado aumentos promedio del 40% en volumen glúteo, 80% de mejora en firmeza y 95% de satisfacción en nuestras pacientes de Mosquera.</p>
+                    </div>
+
+                    <h3>Protocolo de Sesiones Personalizado</h3>
+                    <p>Cada sesión de reestructuración glútea tiene una duración de 90 a 120 minutos e incluye:</p>
+
+                    <ul>
+                        <li>Evaluación detallada del progreso y ajustes del protocolo</li>
+                        <li>Preparación de la zona con productos especializados</li>
+                        <li>Aplicación secuencial de todas las tecnologías según la fase del tratamiento</li>
+                        <li>Masajes de drenaje y tonificación especializados</li>
+                        <li>Aplicación de productos reafirmantes y nutritivos post-tratamiento</li>
+                        <li>Documentación fotográfica del progreso para seguimiento</li>
+                    </ul>
+
+                    <h3>Cronograma y Frecuencia</h3>
+                    <p>Para lograr una reestructuración glútea completa recomendamos un protocolo de 15 a 18 sesiones distribuidas en un período de 4 a 5 meses, con una frecuencia inicial de 3 sesiones por semana que gradualmente se reduce a 2 sesiones semanales en las fases finales.</p>
+
+                    <p>Los primeros cambios son visibles desde la quinta sesión, con transformaciones significativas evidentes al completar la fase 2 del tratamiento. Los resultados finales se consolidan completamente al terminar todo el protocolo.</p>
+
+                    <h3>Cuidados Complementarios</h3>
+                    <p>Para optimizar los resultados de la reestructuración glútea, proporcionamos recomendaciones específicas que incluyen:</p>
+
+                    <ul>
+                        <li>Plan nutricional especializado rico en proteínas y antioxidantes</li>
+                        <li>Rutina de ejercicios específicos para complementar el tratamiento</li>
+                        <li>Productos cosméticos profesionales para uso domiciliario</li>
+                        <li>Técnicas de masaje que puedes realizar en casa</li>
+                        <li>Hábitos de hidratación y descanso óptimos</li>
+                    </ul>
+
+                    <h3>¿Por Qué Elegir Nuestra Reestructuración Glútea?</h3>
+                    <p>En Estética Lisamar somos pioneros en reestructuración glútea en Mosquera, con un equipo de profesionales altamente especializados y tecnología de última generación importada especialmente para estos tratamientos.</p>
+
+                    <p>Nuestro enfoque personalizado y científicamente respaldado garantiza transformaciones reales y duraderas, con un seguimiento exhaustivo que asegura la satisfacción completa de nuestras pacientes.</p>
+                </div>
+
+                <div class="sidebar">
+                    <h3>Agenda tu Consulta</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span style="font-size: 20px; color: var(--gold);">📱</span>
+                            <a href="tel:+573135197957">+57 313 519 7957</a>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <span style="font-size: 20px; color: var(--gold);">📍</span>
+                            <span>Mosquera, Cundinamarca</span>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <span style="font-size: 20px; color: var(--gold);">🕒</span>
+                            <span>Lun - Sáb: 8:00 AM - 6:00 PM</span>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <img src="instagram.jpg" alt="Instagram"
+                                style="width: 22px; height: 22px; margin-right: 8px;">
+                            <a href="https://www.instagram.com/estetica_lisamar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                            target="_blank">
+                            @estetica_lisamar
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/573135197957" class="btn btn-primary" style="width: 100%; text-align: center; display: block;">Contactar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Areas de Servicio -->
+    <section class="areas-section">
+        <div class="areas-container">
+            <h2 class="section-title">Áreas de Servicio</h2>
+            <p style="text-align: center; margin-bottom: 3rem; color: var(--text-gray); font-size: 1.1rem;">
+                Ofrecemos reestructuración glútea en Mosquera y municipios cercanos
+            </p>
+            
+            <div class="areas-list">
+                
+                <div class="area-item">
+                    <h4>Madrid</h4>
+                    <p>Veredas Boyero y La Estancia entre el Río Subachoque, cerro Tibayatá y humedal Laguna de la Herrera y su conurbación con el sector de Casablanca</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Funza</h4>
+                    <p>Conurbación San Andrés y La Ramada del Hato. Reestructuración glútea profesional cerca de ti.</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Bojacá</h4>
+                    <p>Atendemos en todo el municipio de Bojacá con nuestros tratamientos de reestructuración glútea integral.</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Bogotá - Kennedy</h4>
+                    <p>Localidades de Kennedy y Fontibón (desde el Aeropuerto El Dorado hasta la UPZ Las Margaritas Calle 49 Sur)</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Soacha</h4>
+                    <p>Corregimiento 2, vereda Canoas y Corregimiento 2, vereda Bosatama. Transformación glútea de alta calidad.</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Bogotá - Bosa</h4>
+                    <p>Localidad de Bosa (desde la UPZ El Porvenir - Calle 49 Sur- y Tintal Sur hasta desembocadura del Río Tunjuelo)</p>
+                </div>
+
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="color: var(--text-gray); margin-bottom: 2rem;">
+                    ¿No encuentras tu zona? ¡Contáctanos! Evaluamos la posibilidad de extender nuestros servicios.
+                </p>
+                <a href="https://wa.me/573135197957" class="btn btn-primary">Consultar Cobertura</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/573135197957" class="whatsapp-float">
+        <img src="whatsapp.png" alt="WhatsApp" 
+            style="width: 22px; height: 22px; margin-right: 8px;">
+        <span>WhatsApp</span>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Estética Lisamar - Body Beautiful. Todos los derechos reservados.</p>
+            <p>Reestructuración glútea en Mosquera - Transforma completamente tus glúteos</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejuvenecimiento y Nutrición de Manos en Mosquera | Spa y Centro de Bienestar - Estética Lisamar</title>
+    <meta name="description" content="Rejuvenecimiento y Nutrición de Manos en Mosquera para manos suaves, jóvenes y revitalizadas. Tratamiento profesional con productos de alta calidad. Estética Lisamar - Body Beautiful.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #D4AF37;
+            --dark-gold: #B8941F;
+            --light-gold: #F4E4A6;
+            --white: #FFFFFF;
+            --off-white: #FEFEFE;
+            --light-gray: #F8F8F8;
+            --dark-gray: #333333;
+            --text-gray: #666666;
+            --brown: #4A3428;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+        }
+
+        .header {
+            background: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 60px;
+            width: auto;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--gold);
+            border: 2px solid var(--gold);
+        }
+
+        .btn-secondary:hover {
+            background: var(--light-gold);
+            transform: translateY(-2px);
+        }
+
+        .breadcrumb {
+            background: var(--light-gray);
+            padding: 1rem 0;
+        }
+
+        .breadcrumb-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .breadcrumb a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--off-white) 0%, var(--light-gray) 100%);
+            padding: 4rem 0;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: var(--brown);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-content .subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .hero-image {
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .content-section {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .main-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: var(--brown);
+            margin-bottom: 2rem;
+        }
+
+        .main-content h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            margin: 2.5rem 0 1.5rem 0;
+        }
+
+        .main-content p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .main-content ul {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .main-content li {
+            color: var(--text-gray);
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
+        }
+
+        .sidebar {
+            background: var(--light-gray);
+            padding: 3rem;
+            border-radius: 15px;
+            height: fit-content;
+            position: sticky;
+            top: 120px;
+        }
+
+        .sidebar h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--brown);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .contact-info {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .contact-item a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .areas-section {
+            background: linear-gradient(135deg, var(--light-gray), var(--off-white));
+            padding: 6rem 0;
+        }
+
+        .areas-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            text-align: center;
+            color: var(--brown);
+            margin-bottom: 4rem;
+        }
+
+        .areas-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .area-item {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 2px solid transparent;
+        }
+
+        .area-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            border-color: var(--gold);
+        }
+
+        .area-item h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--brown);
+            margin-bottom: 1rem;
+        }
+
+        .area-item p {
+            color: var(--text-gray);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            border-radius: 50px;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        .footer {
+            background: var(--brown);
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer p {
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-gold), rgba(212, 175, 55, 0.1));
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid var(--gold);
+        }
+
+        .highlight-box h4 {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--brown);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .sidebar {
+                position: relative;
+                top: 0;
+            }
+
+            .areas-list {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-buttons {
+                gap: 0.5rem;
+            }
+
+            .btn {
+                padding: 10px 16px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .main-content h2 {
+                font-size: 2rem;
+            }
+
+            .main-content h3 {
+                font-size: 1.5rem;
+            }
+
+            .sidebar {
+                padding: 2rem;
+            }
+
+            .area-item {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/"><img src="logo_limpio.png" alt="Estética Lisamar" class="logo"></a>
+            <div class="nav-buttons">
+                <a href="tel:+573135197957" class="btn btn-secondary">Contacto</a>
+                <a href="../catalogo.html" class="btn btn-primary">Catálogo</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="/">Inicio</a> / <a href="/spa-centro-bienestar-mosquera.html">Spa y Centro de Bienestar en Mosquera</a> / <span>Rejuvenecimiento y Nutrición de Manos en Mosquera</span>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Rejuvenecimiento y Nutrición de Manos en Mosquera</h1>
+                <div class="subtitle">Manos Suaves, Jóvenes y Revitalizadas</div>
+                <p>Ofrecemos el tratamiento más completo de rejuvenecimiento y nutrición para manos en Mosquera, diseñado para restaurar la suavidad, elasticidad y juventud de tus manos. Nuestro protocolo combina técnicas avanzadas de hidratación profunda con principios activos rejuvenecedores que combaten los signos del envejecimiento.</p>
+                <p>Utilizamos productos de alta eficacia, tecnología especializada y un enfoque personalizado para devolverle a tus manos su aspecto juvenil, suavizar la textura y reducir visiblemente manchas, líneas de expresión y sequedad.</p>
+
+                <div class="hero-buttons">
+                    <a href="https://wa.me/573135197957" class="btn btn-primary">Agendar Tratamiento</a>
+                    <a href="/spa-centro-bienestar-mosquera.html" class="btn btn-secondary">Ver Más Tratamientos</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Espacio para imagen principal de rejuvenecimiento de manos -->
+                <img src="rejuvenecimiento-manos-mosquera.jpg" alt="Rejuvenecimiento y Nutrición de Manos en Mosquera - Tratamiento profesional de belleza">
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="content-container">
+            <div class="content-grid">
+                <div class="main-content">
+                    <h2>¿Qué es el Rejuvenecimiento y Nutrición de Manos?</h2>
+                    <p>El rejuvenecimiento y nutrición de manos es un tratamiento estético especializado que combina hidratación profunda, nutrición intensiva y principios activos rejuvenecedores para restaurar la belleza natural de tus manos. Esta terapia está diseñada para combatir los signos del envejecimiento, la exposición solar y los efectos del envejecimiento prematuro.</p>
+
+                    <p>En Estética Lisamar realizamos este tratamiento con un enfoque integral, considerando no solo la apariencia estética sino también la salud de la piel, utilizando productos de alta calidad y técnicas que garantizan resultados visibles desde la primera sesión.</p>
+
+                    <div class="highlight-box">
+                        <h4>Beneficios del Rejuvenecimiento y Nutrición de Manos</h4>
+                        <p>Hidratación profunda y duradera, reducción de manchas y pigmentaciones, suavizado de líneas de expresión, mejora de la elasticidad y firmeza, nutrición intensiva de la piel, restauración del brillo natural, protección contra factores ambientales y rejuvenecimiento visible del aspecto general.</p>
+                    </div>
+
+                    <h3>¿Cómo Funciona Este Tratamiento?</h3>
+                    <p>Nuestro protocolo actúa a través de múltiples mecanismos de acción:</p>
+
+                    <ul>
+                        <li><strong>Hidratación Profunda:</strong> Penetración de activos humectantes en capas profundas.</li>
+                        <li><strong>Nutrición Celular:</strong> Suministro de vitaminas y nutrientes esenciales.</li>
+                        <li><strong>Estimulación de Colágeno:</strong> Activación de la producción natural de colágeno.</li>
+                        <li><strong>Renovación Celular:</strong> Exfoliación suave que promueve la regeneración.</li>
+                        <li><strong>Protección Antioxidante:</strong> Neutralización de radicales libres dañinos.</li>
+                        <li><strong>Unificación del Tono:</strong> Reducción de manchas y pigmentaciones.</li>
+                    </ul>
+
+                    <h3>Técnicas que Aplicamos en Nuestro Tratamiento</h3>
+                    <p>Nuestro protocolo integra las mejores técnicas de cuidado de manos:</p>
+
+                    <ul>
+                        <li><strong>Limpieza Profunda:</strong> Eliminación de impurezas y células muertas.</li>
+                        <li><strong>Exfoliación Suave:</strong> Renovación de la superficie cutánea.</li>
+                        <li><strong>Mascarilla Nutritiva:</strong> Aplicación de principios activos concentrados.</li>
+                        <li><strong>Masaje de Drenaje:</strong> Estimulación de la circulación y eliminación de toxinas.</li>
+                        <li><strong>Hidratación Intensiva:</strong> Aplicación de cremas de alta penetración.</li>
+                        <li><strong>Tratamiento de Uñas:</strong> Cuidado y nutrición de cutículas y uñas.</li>
+                        <li><strong>Protección Final:</strong> Sellado con productos de protección solar y ambiental.</li>
+                    </ul>
+
+                    <h3>Principios Activos que Utilizamos</h3>
+                    <p>Personalizamos tu tratamiento con ingredientes de alta eficacia:</p>
+
+                    <ul>
+                        <li><strong>Ácido Hialurónico:</strong> Hidratación profunda y relleno de líneas finas.</li>
+                        <li><strong>Vitamina C:</strong> Antioxidante potente que ilumina y unifica el tono.</li>
+                        <li><strong>Retinol:</strong> Estimula la renovación celular y producción de colágeno.</li>
+                        <li><strong>Péptidos:</strong> Mejoran la firmeza y elasticidad de la piel.</li>
+                        <li><strong>Niacinamida:</strong> Refuerza la barrera cutánea y reduce manchas.</li>
+                        <li><strong>Ceramidas:</strong> Restauran la barrera lipídica natural.</li>
+                        <li><strong>Aceites Naturales:</strong> Nutrición intensiva y protección.</li>
+                    </ul>
+
+                    <h3>Problemas que Solucionamos</h3>
+                    <p>Nuestro tratamiento está diseñado para combatir:</p>
+
+                    <ul>
+                        <li><strong>Sequedad Extrema:</strong> Piel áspera y deshidratada.</li>
+                        <li><strong>Manchas por Edad:</strong> Hiperpigmentación y léntigos solares.</li>
+                        <li><strong>Pérdida de Volumen:</strong> Manos huesudas y envejecidas.</li>
+                        <li><strong>Líneas de Expresión:</strong> Arrugas y surcos marcados.</li>
+                        <li><strong>Flacidez:</strong> Pérdida de firmeza y elasticidad.</li>
+                        <li><strong>Textura Irregular:</strong> Piel rugosa y con poros dilatados.</li>
+                        <li><strong>Uñas Frágiles:</strong> Debilitamiento y quebradura constante.</li>
+                    </ul>
+
+                    <h3>Protocolo de Nuestra Sesión</h3>
+                    <p>Cada sesión de rejuvenecimiento sigue un protocolo cuidadosamente diseñado:</p>
+
+                    <ul>
+                        <li><strong>Evaluación Inicial:</strong> Análisis del estado actual de tus manos.</li>
+                        <li><strong>Limpieza Profesional:</strong> Eliminación completa de impurezas.</li>
+                        <li><strong>Exfoliación Personalizada:</strong> Según el tipo y condición de tu piel.</li>
+                        <li><strong>Extracción de Impurezas:</strong> Si es necesario y con técnicas no invasivas.</li>
+                        <li><strong>Aplicación de Sueros:</strong> Principios activos concentrados según necesidades.</li>
+                        <li><strong>Mascarilla Específica:</strong> Tratamiento intensivo durante 15-20 minutos.</li>
+                        <li><strong>Masaje de Manos:</strong> Técnicas de drenaje y relajación.</li>
+                        <li><strong>Hidratación y Protección:</strong> Productos finales para mantener resultados.</li>
+                    </ul>
+
+                    <h3>¿Para Quién es Ideal Este Tratamiento?</h3>
+                    <p>Este tratamiento es perfecto para personas que notan signos de envejecimiento en sus manos, quienes han estado expuestas al sol sin protección adecuada, personas con manos secas y ásperas por trabajos manuales, quienes desean prevenir el envejecimiento prematuro, o cualquier persona que quiera mantener sus manos suaves, jóvenes y bien cuidadas.</p>
+
+                    <p>También es ideal como preparación para eventos especiales o como mantenimiento regular de belleza.</p>
+
+                    <div class="highlight-box">
+                        <h4>Resultados que Puedes Esperar</h4>
+                        <p>El 92% de nuestras clientes reportan una mejora inmediata en la suavidad de sus manos, el 88% observa reducción visible de manchas después de 3-4 sesiones, y el 95% experimenta mayor confianza al mostrar sus manos después de completar el tratamiento.</p>
+                    </div>
+
+                    <h3>Frecuencia Recomendada</h3>
+                    <p>Para obtener beneficios óptimos recomendamos:</p>
+
+                    <ul>
+                        <li><strong>Tratamiento Intensivo:</strong> 1 sesión semanal durante 6 semanas.</li>
+                        <li><strong>Mantenimiento:</strong> 1 sesión cada 3-4 semanas.</li>
+                        <li><strong>Prevención:</strong> 1 sesión mensual para mantener resultados.</li>
+                        <li><strong>Preparación Especial:</strong> 2-3 sesiones previas a eventos importantes.</li>
+                        <li><strong>Duración de Sesión:</strong> 60-75 minutos según protocolo.</li>
+                        <li><strong>Resultados Visibles:</strong> Desde la primera sesión, con mejoría progresiva.</li>
+                    </ul>
+
+                    <h3>Cuidados Posteriores al Tratamiento</h3>
+                    <p>Después de tu sesión en Mosquera, te recomendamos:</p>
+
+                    <ul>
+                        <li>Evitar exposición solar directa durante 48 horas.</li>
+                        <li>Usar guantes para tareas domésticas o jardinería.</li>
+                        <li>Aplicar protector solar específico para manos diariamente.</li>
+                        <li>Mantener la hidratación con las cremas recomendadas.</li>
+                        <li>Evitar productos químicos agresivos sin protección.</li>
+                        <li>Seguir las indicaciones específicas de tu terapeuta.</li>
+                        <li>Beber suficiente agua para mantener hidratación interna.</li>
+                    </ul>
+
+                    <h3>Contraindicaciones y Precauciones</h3>
+                    <p>Este tratamiento tiene algunas consideraciones:</p>
+
+                    <ul>
+                        <li><strong>Absolutas:</strong> Heridas abiertas, infecciones activas, alergias conocidas a componentes.</li>
+                        <li><strong>Relativas:</strong> Embarazo, lactancia, condiciones dermatológicas específicas.</li>
+                        <li><strong>Temporales:</strong> Quemaduras solares recientes, tratamientos médicos en curso.</li>
+                        <li><strong>Precauciones:</strong> Piel extremadamente sensible, tratamientos previos agresivos.</li>
+                    </ul>
+
+                    <h3>Preguntas Frecuentes</h3>
+                    <p><strong>¿Es doloroso el tratamiento?</strong> No, es completamente indoloro y relajante. Solo sentirás una agradable sensación de frescura y bienestar.</p>
+
+                    <p><strong>¿Cuándo puedo ver resultados?</strong> Notarás mejoría inmediata en textura y suavidad, mientras que la reducción de manchas y líneas requiere varias sesiones.</p>
+
+                    <p><strong>¿Puedo aplicar esmalte después del tratamiento?</strong> Recomendamos esperar al menos 4 horas antes de aplicar cualquier producto cosmético en las uñas.</p>
+
+                    <p><strong>¿Cuánto duran los resultados?</strong> Los resultados se mantienen con el cuidado adecuado y sesiones de mantenimiento regulares.</p>
+
+                    <h3>¿Por Qué Elegir Estética Lisamar?</h3>
+                    <p>Nuestro equipo de especialistas en cuidado de manos cuenta con certificación profesional y amplia experiencia en técnicas de rejuvenecimiento cutáneo. Utilizamos productos de primeras marcas, protocolos probados y un enfoque personalizado que garantiza resultados visibles y duraderos.</p>
+
+                    <p>Cada sesión es diseñada específicamente para tus necesidades, creando una experiencia que no solo mejora la apariencia de tus manos, sino que también eleva tu confianza y bienestar general.</p>
+                </div>
+
+                <div class="sidebar">
+                    <h3>Agenda tu Tratamiento</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span style="font-size: 20px; color: var(--gold);">📱</span>
+                            <a href="tel:+573135197957">+57 313 519 7957</a>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <span style="font-size: 20px; color: var(--gold);">📍</span>
+                            <span>Mosquera, Cundinamarca</span>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <span style="font-size: 20px; color: var(--gold);">🕒</span>
+                            <span>Lun - Sáb: 8:00 AM - 6:00 PM</span>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <img src="instagram.jpg" alt="Instagram"
+                                style="width: 22px; height: 22px; margin-right: 8px;">
+                            <a href="https://www.instagram.com/estetica_lisamar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                            target="_blank">
+                            @estetica_lisamar
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/573135197957" class="btn btn-primary" style="width: 100%; text-align: center; display: block;">Contactar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Areas de Servicio -->
+    <section class="areas-section">
+        <div class="areas-container">
+            <h2 class="section-title">Áreas de Servicio</h2>
+            <p style="text-align: center; margin-bottom: 3rem; color: var(--text-gray); font-size: 1.1rem;">
+                Ofrecemos rejuvenecimiento y nutrición de manos en Mosquera y municipios cercanos
+            </p>
+            
+            <div class="areas-list">
+                
+                <div class="area-item">
+                    <h4>Madrid</h4>
+                    <p>Veredas Boyero y La Estancia entre el Río Subachoque, cerro Tibayatá y humedal Laguna de la Herrera y su conurbación con el sector de Casablanca</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Funza</h4>
+                    <p>Conurbación San Andrés y La Ramada del Hato. Tratamiento profesional de manos cerca de ti.</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Bojacá</h4>
+                    <p>Atendemos en todo el municipio de Bojacá con nuestros tratamientos de spa y bienestar especializados.</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Bogotá - Kennedy</h4>
+                    <p>Localidades de Kennedy y Fontibón (desde el Aeropuerto El Dorado hasta la UPZ Las Margaritas Calle 49 Sur)</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Soacha</h4>
+                    <p>Corregimiento 2, vereda Canoas y Corregimiento 2, vereda Bosatama. Terapias de belleza de calidad.</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Bogotá - Bosa</h4>
+                    <p>Localidad de Bosa (desde la UPZ El Porvenir - Calle 49 Sur- y Tintal Sur hasta desembocadura del Río Tunjuelo)</p>
+                </div>
+
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="color: var(--text-gray); margin-bottom: 2rem;">
+                    ¿No encuentras tu zona? ¡Contáctanos! Evaluamos la posibilidad de extender nuestros servicios.
+                </p>
+                <a href="https://wa.me/573135197957" class="btn btn-primary">Consultar Cobertura</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/573135197957" class="whatsapp-float">
+        <img src="whatsapp.png" alt="WhatsApp" 
+            style="width: 22px; height: 22px; margin-right: 8px;">
+        <span>WhatsApp</span>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Estética Lisamar - Body Beautiful. Todos los derechos reservados.</p>
+            <p>Rejuvenecimiento y Nutrición de Manos en Mosquera - Manos suaves, jóvenes y revitalizadas</p>
+        </div>
+    </footer>
+</body>
+</html>

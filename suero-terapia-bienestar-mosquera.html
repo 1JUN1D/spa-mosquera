@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sueroterapia de Bienestar en Mosquera | Spa Médico - Estética Lisamar</title>
+    <meta name="description" content="Sueroterapia de Bienestar en Mosquera para hidratación, energía y revitalización. Tratamiento intravenoso con vitaminas y minerales. Estética Lisamar - Body Beautiful.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #D4AF37;
+            --dark-gold: #B8941F;
+            --light-gold: #F4E4A6;
+            --white: #FFFFFF;
+            --off-white: #FEFEFE;
+            --light-gray: #F8F8F8;
+            --dark-gray: #333333;
+            --text-gray: #666666;
+            --brown: #4A3428;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+        }
+
+        .header {
+            background: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 60px;
+            width: auto;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold), var(--dark-gold));
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--gold);
+            border: 2px solid var(--gold);
+        }
+
+        .btn-secondary:hover {
+            background: var(--light-gold);
+            transform: translateY(-2px);
+        }
+
+        .breadcrumb {
+            background: var(--light-gray);
+            padding: 1rem 0;
+        }
+
+        .breadcrumb-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .breadcrumb a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--off-white) 0%, var(--light-gray) 100%);
+            padding: 4rem 0;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            color: var(--brown);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-content .subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .hero-image {
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .content-section {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .main-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: var(--brown);
+            margin-bottom: 2rem;
+        }
+
+        .main-content h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            margin: 2.5rem 0 1.5rem 0;
+        }
+
+        .main-content p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .main-content ul {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .main-content li {
+            color: var(--text-gray);
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
+        }
+
+        .sidebar {
+            background: var(--light-gray);
+            padding: 3rem;
+            border-radius: 15px;
+            height: fit-content;
+            position: sticky;
+            top: 120px;
+        }
+
+        .sidebar h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--brown);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .contact-info {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .contact-item a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .areas-section {
+            background: linear-gradient(135deg, var(--light-gray), var(--off-white));
+            padding: 6rem 0;
+        }
+
+        .areas-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            text-align: center;
+            color: var(--brown);
+            margin-bottom: 4rem;
+        }
+
+        .areas-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .area-item {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 2px solid transparent;
+        }
+
+        .area-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            border-color: var(--gold);
+        }
+
+        .area-item h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--brown);
+            margin-bottom: 1rem;
+        }
+
+        .area-item p {
+            color: var(--text-gray);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            border-radius: 50px;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        .footer {
+            background: var(--brown);
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer p {
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-gold), rgba(212, 175, 55, 0.1));
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid var(--gold);
+        }
+
+        .highlight-box h4 {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--brown);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .sidebar {
+                position: relative;
+                top: 0;
+            }
+
+            .areas-list {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-buttons {
+                gap: 0.5rem;
+            }
+
+            .btn {
+                padding: 10px 16px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .main-content h2 {
+                font-size: 2rem;
+            }
+
+            .main-content h3 {
+                font-size: 1.5rem;
+            }
+
+            .sidebar {
+                padding: 2rem;
+            }
+
+            .area-item {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/"><img src="logo_limpio.png" alt="Estética Lisamar" class="logo"></a>
+            <div class="nav-buttons">
+                <a href="tel:+573135197957" class="btn btn-secondary">Contacto</a>
+                <a href="../catalogo.html" class="btn btn-primary">Catálogo</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="/">Inicio</a> / <a href="/spa-medico-mosquera.html">Spa Médico en Mosquera</a> / <span>Sueroterapia de Bienestar en Mosquera</span>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Sueroterapia de Bienestar en Mosquera</h1>
+                <div class="subtitle">Hidratación, Energía y Revitalización Intravenosa</div>
+                <p>Ofrecemos el tratamiento más completo de Sueroterapia de Bienestar en Mosquera, una terapia médica intravenosa diseñada para restaurar el equilibrio hidroelectrolítico, reponer vitaminas y minerales, y promover el bienestar general. Nuestro protocolo médico personalizado combina soluciones balanceadas con cocteles específicos según tus necesidades individuales.</p>
+                <p>Utilizamos técnicas médicas estériles y fórmulas especialmente diseñadas para proporcionar hidratación profunda, energía inmediata y revitalización celular, con resultados que se sienten desde la primera sesión.</p>
+
+                <div class="hero-buttons">
+                    <a href="https://wa.me/573135197957" class="btn btn-primary">Agendar Consulta</a>
+                    <a href="/spa-medico-mosquera.html" class="btn btn-secondary">Ver Más Tratamientos</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Espacio para imagen principal de sueroterapia -->
+                <img src="suero-terapia-bienestar-mosquera.jpg" alt="Sueroterapia de Bienestar en Mosquera - Tratamiento médico especializado">
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="content-container">
+            <div class="content-grid">
+                <div class="main-content">
+                    <h2>¿Qué es la Sueroterapia de Bienestar?</h2>
+                    <p>La Sueroterapia de Bienestar es un tratamiento médico que consiste en la administración intravenosa de soluciones balanceadas de electrolitos, vitaminas, minerales y antioxidantes directamente al torrente sanguíneo. Esta vía de administración permite una biodisponibilidad del 100%, superando las limitaciones de absorción del tracto gastrointestinal y proporcionando efectos inmediatos y potentes.</p>
+
+                    <p>En Estética Lisamar realizamos la sueroterapia bajo supervisión médica especializada, utilizando protocolos personalizados que se adaptan a las necesidades específicas de cada paciente, asegurando máxima seguridad y eficacia.</p>
+
+                    <div class="highlight-box">
+                        <h4>Beneficios de la Sueroterapia de Bienestar</h4>
+                        <p>Hidratación profunda a nivel celular, aumento inmediato de energía y vitalidad, fortalecimiento del sistema inmunológico, desintoxicación y antioxidación, mejora del rendimiento físico y mental, recuperación rápida post-ejercicio, y equilibrio del estado de ánimo.</p>
+                    </div>
+
+                    <h3>¿Cómo Funciona la Sueroterapia?</h3>
+                    <p>El proceso de sueroterapia sigue un protocolo médico preciso:</p>
+
+                    <ul>
+                        <li><strong>Evaluación Médica:</strong> Historia clínica completa y análisis de necesidades.</li>
+                        <li><strong>Selección de Fórmula:</strong> Elección del coctel específico según objetivos.</li>
+                        <strong>Preparación de la Solución:</strong> Mezcla estéril de componentes en ambiente controlado.</li>
+                        <li><strong>Acceso Venoso:</strong> Colocación de catéter intravenoso por personal calificado.</li>
+                        <li><strong>Administración Controlada:</strong> Infusión lenta y monitorizada de la solución.</li>
+                        <li><strong>Monitoreo Continuo:</strong> Supervisión médica durante todo el procedimiento.</li>
+                        <li><strong>Finalización y Cuidados:</strong> Retiro del catéter y recomendaciones post-tratamiento.</li>
+                    </ul>
+
+                    <h3>Cocteles de Sueroterapia Disponibles</h3>
+                    <p>Ofrecemos una variedad de fórmulas especializadas para diferentes necesidades:</p>
+
+                    <ul>
+                        <li><strong>Energía y Vitalidad:</strong> Complejo B, vitamina C, magnesio y aminoácidos.</li>
+                        <li><strong>Desintoxicación:</strong> Glutatión, vitamina C, zinc y selenio.</li>
+                        <li><strong>Belleza y Piel:</strong> Biotina, colágeno, vitamina E y silicio.</li>
+                        <li><strong>Rendimiento Deportivo:</strong> Aminoácidos ramificados, magnesio y electrolitos.</li>
+                        <li><strong>Sistema Inmunológico:</strong> Zinc, vitamina C, vitamina D y glutatión.</li>
+                        <li><strong>Antienvejecimiento:</strong> Antioxidantes, vitaminas y minerales esenciales.</li>
+                        <li><strong>Hidratación Intensa:</strong> Electrolitos balanceados y minerales.</li>
+                    </ul>
+
+                    <h3>Componentes Principales de Nuestros Sueros</h3>
+                    <p>Nuestras fórmulas incluyen los componentes más efectivos:</p>
+
+                    <ul>
+                        <li><strong>Complejo de Vitaminas B:</strong> Energía, metabolismo y función nerviosa.</li>
+                        <li><strong>Vitamina C:</strong> Antioxidante, inmunidad y producción de colágeno.</li>
+                        <li><strong>Magnesio:</strong> Relajación muscular, energía y función cardiaca.</li>
+                        <li><strong>Calcio:</strong> Salud ósea y función muscular.</li>
+                        <li><strong>Zinc:</strong> Inmunidad, cicatrización y salud de la piel.</li>
+                        <li><strong>Aminoácidos:</strong> Recuperación muscular y función cerebral.</li>
+                        <li><strong>Glutatón:</strong> Desintoxicación y protección antioxidante.</li>
+                    </ul>
+
+                    <h3>Ventajas de la Administración Intravenosa</h3>
+                    <p>La vía intravenosa ofrece beneficios únicos comparada con la suplementación oral:</p>
+
+                    <ul>
+                        <li><strong>Biodisponibilidad 100%:</strong> Absorción completa sin pérdidas digestivas.</li>
+                        <li><strong>Efectos Inmediatos:</strong> Resultados que se sienten durante la infusión.</li>
+                        <li><strong>Concentraciones Terapéuticas:</strong> Dosis más altas que las posibles por vía oral.</li>
+                        <li><strong>Sin Efectos Gastrointestinales:</strong> Evita molestias digestivas.</li>
+                        <li><strong>Hidratación Profunda:</strong> Restauración rápida del equilibrio hídrico.</li>
+                        <li><strong>Personalización Exacta:</strong> Fórmulas adaptadas a necesidades específicas.</li>
+                    </ul>
+
+                    <h3>Protocolo Médico del Tratamiento</h3>
+                    <p>Nuestro protocolo de sueroterapia en Mosquera incluye los siguientes pasos especializados:</p>
+
+                    <ul>
+                        <li><strong>Consulta Médica Inicial:</strong> Evaluación completa y establecimiento de objetivos.</li>
+                        <li><strong>Selección de Fórmula:</strong> Elección del coctel según diagnóstico.</li>
+                        <li><strong>Preparación del Ambiente:</strong> Sala médica equipada y estéril.</li>
+                        <li><strong>Acceso Venoso:</strong> Técnica aséptica por personal calificado.</li>
+                        <li><strong>Infusión Monitorizada:</strong> Administración lenta durante 30-60 minutos.</li>
+                        <li><strong>Supervisión Médica:</strong> Control constante de signos vitales.</li>
+                        <li><strong>Finalización Segura:</strong> Retiro del catéter y observación post-tratamiento.</li>
+                        <li><strong>Plan de Seguimiento:</strong> Programación de sesiones según necesidades.</li>
+                    </ul>
+
+                    <h3>¿Para Quién es Ideal la Sueroterapia?</h3>
+                    <p>La sueroterapia es ideal para personas con estilo de vida activo y demandante, deportistas que buscan mejor rendimiento, ejecutivos con alto estrés laboral, pacientes con fatiga crónica o deficiencias nutricionales, quienes se recuperan de enfermedades, o personas que buscan optimizar su bienestar general.</p>
+
+                    <p>También es perfecta como preparación para eventos importantes, después de viajes largos, o durante cambios estacionales.</p>
+
+                    <div class="highlight-box">
+                        <h4>Resultados Comprobados</h4>
+                        <p>Estudios clínicos demuestran que la sueroterapia puede aumentar los niveles de energía en un 70%, mejorar la hidratación celular en un 85%, fortalecer el sistema inmunológico y reducir significativamente los síntomas de fatiga desde la primera sesión.</p>
+                    </div>
+
+                    <h3>Frecuencia y Duración del Tratamiento</h3>
+                    <p>Para obtener resultados óptimos con sueroterapia recomendamos:</p>
+
+                    <ul>
+                        <li><strong>Mantenimiento Básico:</strong> 1 sesión mensual.</li>
+                        <li><strong>Bienestar General:</strong> 2-4 sesiones al mes inicialmente.</li>
+                        <li><strong>Tratamiento Intensivo:</strong> 1-2 sesiones semanales por 4-6 semanas.</li>
+                        <li><strong>Preparación Especial:</strong> Sesiones previas a eventos importantes.</li>
+                        <li><strong>Duración de la Sesión:</strong> 30-60 minutos por tratamiento.</li>
+                        <li><strong>Resultados Inmediatos:</strong> Efectos que se sienten durante la infusión.</li>
+                    </ul>
+
+                    <h3>Condiciones que Mejoramos con Sueroterapia</h3>
+                    <p>La sueroterapia puede ayudar en múltiples condiciones:</p>
+
+                    <ul>
+                        <li><strong>Fatiga y Agotamiento:</strong> Restauración de energía y vitalidad.</li>
+                        <li><strong>Deshidratación:</strong> Reposición profunda de líquidos y electrolitos.</li>
+                        <li><strong>Estrés Oxidativo:</strong> Neutralización de radicales libres.</li>
+                        <li><strong>Deficiencias Nutricionales:</strong> Corrección de vitaminas y minerales.</li>
+                        <li><strong>Resacas y Hangovers:</strong> Recuperación rápida y efectiva.</li>
+                        <li><strong>Jet Lag:</strong> Readaptación del ritmo circadiano.</li>
+                        <li><strong>Convalecencia:</strong> Aceleración de la recuperación post-enfermedad.</li>
+                    </ul>
+
+                    <h3>Cuidados Post-Tratamiento</h3>
+                    <p>Después de tu sesión de sueroterapia en Mosquera, recomendamos:</p>
+
+                    <ul>
+                        <li>Mantener una hidratación adecuada con agua natural.</li>
+                        <li>Evitar actividades extenuantes durante las primeras 4 horas.</li>
+                        <li>Consumir alimentos ligeros y nutritivos.</li>
+                        <li>No consumir alcohol durante las primeras 24 horas.</li>
+                        <li>Descansar y permitir que el cuerpo aproveche los nutrientes.</li>
+                        <li>Seguir una alimentación balanceada rica en frutas y verduras.</li>
+                        <li>Reportar cualquier molestia inusual a nuestro equipo médico.</li>
+                    </ul>
+
+                    <h3>Contraindicaciones y Precauciones</h3>
+                    <p>La sueroterapia tiene algunas contraindicaciones importantes:</p>
+
+                    <ul>
+                        <li><strong>Absolutas:</strong> Insuficiencia renal severa, edema pulmonar, alergia a componentes.</li>
+                        <li><strong>Relativas:</strong> Enfermedades cardíacas, hipertensión no controlada.</li>
+                        <li><strong>Temporales:</strong> Infecciones activas, fiebre, desequilibrios electrolíticos severos.</li>
+                        <li><strong>Precauciones:</strong> Embarazo, lactancia, condiciones médicas crónicas.</li>
+                    </ul>
+
+                    <h3>Preguntas Frecuentes</h3>
+                    <p><strong>¿Duele el tratamiento?</strong> Solo se siente una pequeña molestia al colocar el catéter, similar a un análisis de sangre.</p>
+
+                    <p><strong>¿Cuándo se sienten los efectos?</strong> Los efectos se notan durante la infusión y se maximizan en las siguientes 24-48 horas.</p>
+
+                    <p><strong>¿Es segura la sueroterapia?</strong> Totalmente segura cuando es realizada por personal médico calificado en ambiente controlado.</p>
+
+                    <p><strong>¿Se puede combinar con otros tratamientos?</strong> Sí, es compatible con la mayoría de tratamientos estéticos y médicos.</p>
+
+                    <h3>¿Por Qué Elegir Estética Lisamar?</h3>
+                    <p>Nuestro equipo médico especializado en sueroterapia cuenta con certificación y amplia experiencia en medicina de bienestar. Utilizamos soluciones de grado médico, técnicas estériles y seguimiento personalizado para cada paciente.</p>
+
+                    <p>Cada tratamiento es supervisado por profesionales médicos que garantizan la correcta indicación, técnica y monitoreo, asegurando resultados seguros, efectivos y adaptados a tus necesidades específicas de bienestar.</p>
+                </div>
+
+                <div class="sidebar">
+                    <h3>Agenda tu Consulta</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span style="font-size: 20px; color: var(--gold);">📱</span>
+                            <a href="tel:+573135197957">+57 313 519 7957</a>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <span style="font-size: 20px; color: var(--gold);">📍</span>
+                            <span>Mosquera, Cundinamarca</span>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <span style="font-size: 20px; color: var(--gold);">🕒</span>
+                            <span>Lun - Sáb: 8:00 AM - 6:00 PM</span>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <img src="instagram.jpg" alt="Instagram"
+                                style="width: 22px; height: 22px; margin-right: 8px;">
+                            <a href="https://www.instagram.com/estetica_lisamar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                            target="_blank">
+                            @estetica_lisamar
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/573135197957" class="btn btn-primary" style="width: 100%; text-align: center; display: block;">Contactar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Areas de Servicio -->
+    <section class="areas-section">
+        <div class="areas-container">
+            <h2 class="section-title">Áreas de Servicio</h2>
+            <p style="text-align: center; margin-bottom: 3rem; color: var(--text-gray); font-size: 1.1rem;">
+                Ofrecemos sueroterapia de bienestar en Mosquera y municipios cercanos
+            </p>
+            
+            <div class="areas-list">
+                
+                <div class="area-item">
+                    <h4>Madrid</h4>
+                    <p>Veredas Boyero y La Estancia entre el Río Subachoque, cerro Tibayatá y humedal Laguna de la Herrera y su conurbación con el sector de Casablanca</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Funza</h4>
+                    <p>Conurbación San Andrés y La Ramada del Hato. Sueroterapia profesional cerca de ti.</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Bojacá</h4>
+                    <p>Atendemos en todo el municipio de Bojacá con nuestros tratamientos de spa médico especializados.</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Bogotá - Kennedy</h4>
+                    <p>Localidades de Kennedy y Fontibón (desde el Aeropuerto El Dorado hasta la UPZ Las Margaritas Calle 49 Sur)</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Soacha</h4>
+                    <p>Corregimiento 2, vereda Canoas y Corregimiento 2, vereda Bosatama. Tratamientos médicos de calidad.</p>
+                </div>
+
+                <div class="area-item">
+                    <h4>Bogotá - Bosa</h4>
+                    <p>Localidad de Bosa (desde la UPZ El Porvenir - Calle 49 Sur- y Tintal Sur hasta desembocadura del Río Tunjuelo)</p>
+                </div>
+
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="color: var(--text-gray); margin-bottom: 2rem;">
+                    ¿No encuentras tu zona? ¡Contáctanos! Evaluamos la posibilidad de extender nuestros servicios.
+                </p>
+                <a href="https://wa.me/573135197957" class="btn btn-primary">Consultar Cobertura</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/573135197957" class="whatsapp-float">
+        <img src="whatsapp.png" alt="WhatsApp" 
+            style="width: 22px; height: 22px; margin-right: 8px;">
+        <span>WhatsApp</span>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Estética Lisamar - Body Beautiful. Todos los derechos reservados.</p>
+            <p>Sueroterapia de Bienestar en Mosquera - Hidratación, energía y revitalización intravenosa</p>
+        </div>
+    </footer>
+</body>
+</html>
