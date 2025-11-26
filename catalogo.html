@@ -661,7 +661,6 @@
         <div class="hero-tags">
           <span class="hero-tag">Moldeo corporal</span>
           <span class="hero-tag">Limpiezas faciales de lujo</span>
-          <span class="hero-tag">Spa médico</span>
           <span class="hero-tag">Masajes &amp; bienestar</span>
         </div>
         <div class="hero-buttons">
@@ -689,7 +688,6 @@
     <div class="catalog-nav">
       <button class="nav-chip active" data-target="corporal">Estética Corporal &amp; Post-operatorios</button>
       <button class="nav-chip" data-target="facial">Spa Facial</button>
-      <button class="nav-chip" data-target="medico">Spa Médico</button>
       <button class="nav-chip" data-target="bienestar">Spa &amp; Centro de Bienestar</button>
     </div>
   </section>
@@ -831,28 +829,6 @@
     </div>
   </section>
 
-  <!-- SECCIÓN: MÉDICO -->
-  <section id="medico" class="catalog-section">
-    <div class="catalog-container reveal">
-      <div class="section-image-wrapper">
-        <!-- Usando la misma ruta del index para spa médico -->
-        <img src="spa_medico.jpg" alt="Spa médico en Mosquera - Estética Lisamar">
-      </div>
-      <div class="section-content">
-        <div class="section-subtitle">Médico · Regenerativo · Wellness</div>
-        <h2>Spa Médico</h2>
-        <p class="section-description">
-          Procedimientos médico-estéticos de apoyo para potenciar la regeneración y el bienestar.
-        </p>
-        <div class="services-grid">
-          <button class="service-pill"><span class="service-pill-bullet"></span><span>PRP – Plasma rico en plaquetas</span></button>
-          <button class="service-pill"><span class="service-pill-bullet"></span><span>Suero-terapia de bienestar</span></button>
-          <button class="service-pill"><span class="service-pill-bullet"></span><span>Rejuvenecimiento de cuello y escote</span></button>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- SECCIÓN: BIENESTAR -->
   <section id="bienestar" class="catalog-section">
     <div class="catalog-container reveal">
@@ -884,7 +860,7 @@
         <div class="contact-card">
           <div class="contact-item">
             <div class="contact-icon">📍</div>
-            <span>Mosquera, Cundinamarca · Sede RUBY FIT SPORTS</span>
+            <span>Mosquera, Cundinamarca</span>
           </div>
           <div class="contact-item">
             <div class="contact-icon">📱</div>
@@ -948,7 +924,7 @@
     });
 
     // Resaltar chip activo según sección visible
-    const sections = ['corporal','facial','medico','bienestar'].map(id => document.getElementById(id));
+    const sections = ['corporal','facial','bienestar'].map(id => document.getElementById(id));
     const chips = document.querySelectorAll('.nav-chip');
 
     const observer = new IntersectionObserver(entries => {
